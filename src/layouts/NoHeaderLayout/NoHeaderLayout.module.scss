@@ -1,0 +1,15 @@
+.wrapper {
+	min-height: 100vh;
+
+	&.dark {
+		background-color: #1a1a1a;
+	}
+
+	&.light {
+		background-color: #ffffff;
+	}
+}
+
+.container {
+	height: 100%;
+}

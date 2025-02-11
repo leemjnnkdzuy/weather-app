@@ -1,0 +1,85 @@
+.wrapper {
+	display: flex;
+	min-height: 100vh;
+	position: relative;
+	overflow-x: hidden;
+}
+
+.container {
+	flex: 1;
+	margin-left: 240px;
+	padding: 24px;
+	min-height: 100vh;
+
+	@media (max-width: 768px) {
+		margin-left: 72px;
+	}
+}
+
+.content-container {
+	flex: 1;
+	margin-left: var(--sidebar-width);
+	transition: margin-left 0.3s ease;
+	min-height: 100vh;
+	background: var(--background-color);
+
+	@media (max-width: 768px) {
+		margin-left: var(--sidebar-width-mobile);
+	}
+}
+
+.content {
+	flex: 1;
+	padding: 24px;
+	margin: 0 auto;
+	width: 100%;
+	max-width: auto;
+	overflow-y: auto;
+	min-height: calc(100vh - var(--header-height));
+	height: 100%;
+	position: relative;
+	overflow-x: hidden;
+
+	@media (max-width: 768px) {
+		padding: 0;
+		overflow-x: hidden;
+	}
+}
+
+.main-header {
+	height: var(--header-height);
+	display: flex;
+	align-items: center;
+	padding: 0 20px;
+	border-bottom: 1px solid var(--border-color);
+}
+
+.app-container {
+	display: flex;
+	min-height: 100vh;
+	max-height: 100vh;
+	overflow: hidden;
+	background-color: var(--background-color);
+}
+
+.main-container {
+	flex: 1;
+	margin-left: var(--sidebar-width);
+	display: flex;
+	flex-direction: column;
+	transition: all 0.3s ease;
+	height: 100vh;
+	overflow-y: auto;
+
+	&.collapsed {
+		margin-left: 80px;
+	}
+
+	@media (max-width: 768px) {
+		margin-left: var(--sidebar-width-mobile);
+		margin-left: 0;
+		padding-left: 70px;
+		padding-left: 0;
+		overflow-x: hidden;
+	}
+}
