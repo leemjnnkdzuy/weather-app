@@ -3,7 +3,6 @@
 :root {
 	--font-family: "Open Sans", sans-serif;
 
-	// Light theme defaults
 	--background-color: #ffffff;
 	--text-color: #333333;
 	--header-bg: rgba(255, 255, 255, 0.85);
@@ -11,6 +10,8 @@
 	--hover-bg: rgba(0, 0, 0, 0.05);
 	--active-color: #007bff;
 	--active-bg: rgba(0, 123, 255, 0.1);
+	--header-height: 60px;
+	--component-bg: #ffffff;
 }
 
 [data-theme="dark"] {
@@ -21,12 +22,14 @@
 	--hover-bg: rgba(255, 255, 255, 0.05);
 	--active-color: #4dabf7;
 	--active-bg: rgba(77, 171, 247, 0.1);
+	--component-bg: #1a1a1a;
 }
 
 * {
 	margin: 0;
 	padding: 0;
 	box-sizing: border-box;
+	user-select: none;
 }
 
 html {

@@ -12,5 +12,46 @@
 	"settings": {
 		"theme": "Giao diện",
 		"language": "Ngôn ngữ"
+	},
+	"home": {
+		"title": "Dự Báo Thời Tiết",
+		"subtitle": "Nhập tên thành phố để xem thông tin thời tiết",
+		"searchPlaceholder": "Tìm kiếm thành phố...",
+		"searchButton": "Tìm kiếm",
+		"weatherInfo": {
+			"temperature": "Nhiệt độ",
+			"humidity": "Độ ẩm",
+			"windSpeed": "Tốc độ gió",
+			"pressure": "Áp suất"
+		},
+		"weatherDetails": {
+			"temperature": {
+				"title": "Nhiệt độ",
+				"current": "Hiện tại",
+				"feelsLike": "Cảm giác như",
+				"min": "Thấp nhất",
+				"max": "Cao nhất"
+			},
+			"wind": {
+				"title": "Gió",
+				"speed": "Tốc độ",
+				"direction": "Hướng",
+				"gust": "Gió giật"
+			},
+			"sun": {
+				"title": "Mặt trời",
+				"sunrise": "Bình minh",
+				"sunset": "Hoàng hôn"
+			},
+			"atmosphere": {
+				"title": "Khí quyển",
+				"clouds": "Mây",
+				"humidity": "Độ ẩm",
+				"pressure": "Áp suất",
+				"visibility": "Tầm nhìn"
+			},
+			"location": "Vị trí"
+		},
+		"useLocation": "Vị Trí Của Bạn"
 	}
 }

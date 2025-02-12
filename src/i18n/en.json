@@ -12,5 +12,45 @@
 	"settings": {
 		"theme": "Theme",
 		"language": "Language"
-	}
+	},
+	"home": {
+	"title": "Weather Forecast",
+	"subtitle": "Enter a city name to get weather information",
+	"searchPlaceholder": "Search for a city...",
+	"searchButton": "Search",
+	"weatherInfo": {
+		"temperature": "Temperature",
+		"humidity": "Humidity",
+		"windSpeed": "Wind Speed",
+		"pressure": "Pressure"
+	},
+	"weatherDetails": {
+		"temperature": {
+			"title": "Temperature",
+			"current": "Current",
+			"feelsLike": "Feels like",
+			"min": "Min",
+			"max": "Max"
+		},
+		"wind": {
+			"title": "Wind",
+			"speed": "Speed",
+			"direction": "Direction",
+			"gust": "Gust"
+		},
+		"sun": {
+			"title": "Sun",
+			"sunrise": "Sunrise",
+			"sunset": "Sunset"
+		},
+		"atmosphere": {
+			"title": "Atmosphere",
+			"clouds": "Clouds",
+			"humidity": "Humidity",
+			"pressure": "Pressure",
+			"visibility": "Visibility"
+		}
+	},
+	"useLocation": "Your Location"
+}
 }

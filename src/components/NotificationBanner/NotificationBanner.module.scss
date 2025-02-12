@@ -15,6 +15,7 @@
 
 .content {
 	text-align: center;
+	z-index: 100;
 
 	h2 {
 		font-size: 24px;
@@ -112,7 +113,7 @@
 .rain-container {
 	position: absolute;
 	width: 400px;
-	height: 200px;
+	height: 190px;
 	top: 250px;
 	left: 50%;
 	transform: translateX(-50%);
