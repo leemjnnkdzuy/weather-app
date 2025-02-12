@@ -1,0 +1,58 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap");
+
+:root {
+	--font-family: "Open Sans", sans-serif;
+
+	// Light theme defaults
+	--background-color: #ffffff;
+	--text-color: #333333;
+	--header-bg: rgba(255, 255, 255, 0.85);
+	--border-color: rgba(0, 0, 0, 0.1);
+	--hover-bg: rgba(0, 0, 0, 0.05);
+	--active-color: #007bff;
+	--active-bg: rgba(0, 123, 255, 0.1);
+}
+
+[data-theme="dark"] {
+	--background-color: #1a1a1a;
+	--text-color: #ffffff;
+	--header-bg: rgba(26, 26, 26, 0.85);
+	--border-color: rgba(255, 255, 255, 0.1);
+	--hover-bg: rgba(255, 255, 255, 0.05);
+	--active-color: #4dabf7;
+	--active-bg: rgba(77, 171, 247, 0.1);
+}
+
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+html {
+	font-size: 62.5%;
+}
+
+body {
+	font-family: var(--font-family);
+	font-size: 1.6rem;
+	line-height: 1.5;
+	text-rendering: optimizeSpeed;
+	overflow-y: overlay;
+	background-color: var(--background-color);
+	color: var(--text-color);
+	transition: background-color 1s ease, color 1s ease;
+}
+
+button,
+input,
+[tabindex] {
+	outline: none;
+	border: none;
+	font-family: var(--font-family);
+}
+
+a {
+	color: inherit;
+	text-decoration: none;
+}

@@ -1,0 +1,16 @@
+{
+	"header": {
+		"home": "Home",
+		"airQuality": "World Air Quality Ranking",
+		"storm": "Storm & Hydrometeorological Forecasting"
+	},
+	"notFound": {
+		"title": "Looks Like a Stormy Day!",
+		"description": "The page you're looking for got lost in the rain",
+		"button": "Head Back to Sunshine"
+	},
+	"settings": {
+		"theme": "Theme",
+		"language": "Language"
+	}
+}

@@ -41,8 +41,24 @@
 	overflow-x: hidden;
 
 	@media (max-width: 768px) {
-		padding: 0;
+		padding: 12px;
 		overflow-x: hidden;
+		margin-top: 0;
+	}
+
+	margin-top: 80px;
+	min-height: calc(100vh - 80px);
+	border-radius: 12px;
+	padding: 20px;
+
+	.light & {
+		background-color: #fff;
+		box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+	}
+
+	.dark & {
+		background-color: #242424;
+		box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
 	}
 }
 
@@ -60,6 +76,19 @@
 	max-height: 100vh;
 	overflow: hidden;
 	background-color: var(--background-color);
+
+	min-height: 100vh;
+	transition: all 0.3s ease;
+
+	&.light {
+		background-color: #f0f2f5;
+		color: #333;
+	}
+
+	&.dark {
+		background-color: #1a1a1a;
+		color: #fff;
+	}
 }
 
 .main-container {
@@ -70,6 +99,8 @@
 	transition: all 0.3s ease;
 	height: 100vh;
 	overflow-y: auto;
+	width: 100%;
+	padding: 20px 48px;
 
 	&.collapsed {
 		margin-left: 80px;
@@ -78,8 +109,7 @@
 	@media (max-width: 768px) {
 		margin-left: var(--sidebar-width-mobile);
 		margin-left: 0;
-		padding-left: 70px;
-		padding-left: 0;
+		padding: 12px;
 		overflow-x: hidden;
 	}
 }

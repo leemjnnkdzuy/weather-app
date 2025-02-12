@@ -1,0 +1,16 @@
+{
+	"header": {
+		"home": "Trang chủ",
+		"airQuality": "Xếp hạng chất lượng không khí thế giới",
+		"storm": "Dự báo bão và khí tượng thủy văn"
+	},
+	"notFound": {
+		"title": "Có Vẻ Như Trời Đang Mưa!",
+		"description": "Trang bạn đang tìm kiếm đã bị cuốn trôi trong mưa",
+		"button": "Quay Về Trời Nắng"
+	},
+	"settings": {
+		"theme": "Giao diện",
+		"language": "Ngôn ngữ"
+	}
+}
