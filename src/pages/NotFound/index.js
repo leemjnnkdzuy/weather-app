@@ -2,7 +2,7 @@ import React from "react";
 import { useNavigate } from "react-router-dom";
 import { useTranslation } from "react-i18next";
 import classNames from "classnames/bind";
-import NotificationBanner from "../../components/NotificationBanner/NotificationBanner";
+import NotificationBanner from "../../components/NotificationBanner";
 import styles from "./NotFound.module.scss";
 
 const cx = classNames.bind(styles);

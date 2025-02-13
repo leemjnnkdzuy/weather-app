@@ -1,11 +1,10 @@
-import React, { useState, useEffect, useRef } from "react";
+import React, { useState, useEffect } from "react";
 import { useTranslation } from "react-i18next";
-import { IoSearchOutline, IoCloseCircle } from "react-icons/io5";
-import { BiCurrentLocation } from "react-icons/bi";
 import classNames from "classnames/bind";
 import styles from "./Home.module.scss";
 import weatherService from "../../utils/request";
 import WeatherResult from "../../components/WeatherResult";
+import SearchForm from "../../components/SearchForm";
 
 const cx = classNames.bind(styles);
 
@@ -17,20 +16,6 @@ function Home() {
 	const [error, setError] = useState(null);
 	const [suggestions, setSuggestions] = useState([]);
 	const [showSuggestions, setShowSuggestions] = useState(false);
-	const searchBoxRef = useRef(null);
-
-	useEffect(() => {
-		const handleClickOutside = (event) => {
-			if (searchBoxRef.current && !searchBoxRef.current.contains(event.target)) {
-				setShowSuggestions(false);
-			}
-		};
-
-		document.addEventListener("mousedown", handleClickOutside);
-		return () => {
-			document.removeEventListener("mousedown", handleClickOutside);
-		};
-	}, []);
 
 	const handleSearch = async (e) => {
 		e.preventDefault();
@@ -55,6 +40,9 @@ function Home() {
 
 	const handleClear = () => {
 		setSearchQuery("");
+	};
+
+	const handleCloseWeather = () => {
 		setWeatherData(null);
 		setError(null);
 	};
@@ -163,56 +151,28 @@ function Home() {
 				<h1 className={cx("title")}>{t("home.title")}</h1>
 				<p className={cx("subtitle")}>{t("home.subtitle")}</p>
 
-				<form className={cx("search-form")} onSubmit={handleSearch}>
-					<div className={cx("search-box")} ref={searchBoxRef}>
-						<IoSearchOutline className={cx("search-icon")} />
-						<input
-							type="text"
-							placeholder={t("home.searchPlaceholder")}
-							value={searchQuery}
-							onChange={handleInputChange}
-							onFocus={() => setShowSuggestions(true)}
-							className={cx("search-input")}
-						/>
-						{searchQuery && (
-							<button type="button" className={cx("clear-button")} onClick={handleClear}>
-								<IoCloseCircle />
-							</button>
-						)}
-						{showSuggestions && suggestions.length > 0 && (
-							<div className={cx("suggestions-container")}>
-								{suggestions.map((suggestion, index) => (
-									<div
-										key={index}
-										className={cx("suggestion-item")}
-										onClick={() => handleSuggestionClick(suggestion)}
-									>
-										{suggestion.fullName}
-									</div>
-								))}
-							</div>
-						)}
-					</div>
-					<button
-						type="button"
-						className={cx("location-button")}
-						onClick={handleGetLocation}
-					>
-						<BiCurrentLocation />
-						<span className={cx("button-text")}>{t("home.useLocation")}</span>
-					</button>
-					<button
-						type="submit"
-						className={cx("search-button", { loading: loading })}
-						disabled={loading}
-					>
-						{t("home.searchButton")}
-					</button>
-				</form>
+				<SearchForm
+					searchQuery={searchQuery}
+					handleInputChange={handleInputChange}
+					handleSearch={handleSearch}
+					handleClear={handleClear}
+					handleGetLocation={handleGetLocation}
+					handleSuggestionClick={handleSuggestionClick}
+					suggestions={suggestions}
+					showSuggestions={showSuggestions}
+					setShowSuggestions={setShowSuggestions}
+					loading={loading}
+					t={t}
+				/>
 
 				{error && <div className={cx("error-message")}>{error}</div>}
-
-				{weatherData && <WeatherResult weatherData={weatherData} loading={loading} />}
+				{weatherData && (
+					<WeatherResult
+						weatherData={weatherData}
+						loading={loading}
+						onClose={handleCloseWeather}
+					/>
+				)}
 			</div>
 		</div>
 	);

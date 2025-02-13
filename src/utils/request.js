@@ -72,7 +72,7 @@ export const weatherService = {
 		if (!query || query.length < 2) return [];
 		try {
 			const response = await axios.get(
-				`http://api.openweathermap.org/geo/1.0/direct?q=${query}&limit=5&appid=${API_KEY}`
+				`https://api.openweathermap.org/geo/1.0/direct?q=${query}&limit=5&appid=${API_KEY}`
 			);
 			return response.data.map((item) => ({
 				name: item.local_names?.en || item.name,

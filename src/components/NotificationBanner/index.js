@@ -12,8 +12,8 @@ const NotificationBanner = ({ message, type = "info" }) => {
 	useEffect(() => {
 		const drops = [...Array(20)].map(() => ({
 			left: Math.random() * 100,
-			animationDuration: `${Math.random() * 0.3 + 0.7}s`, // Faster animation
-			animationDelay: `${Math.random() * 1.5}s`, // Shorter delays
+			animationDuration: `${Math.random() * 0.3 + 0.7}s`,
+			animationDelay: `${Math.random() * 1.5}s`,
 		}));
 		setRaindrops(drops);
 	}, []);

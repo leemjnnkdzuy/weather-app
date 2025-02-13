@@ -10,12 +10,13 @@ import {
 	WiSnow,
 	WiThunderstorm,
 } from "react-icons/wi";
+import { IoCloseCircle } from "react-icons/io5";
 import classNames from "classnames/bind";
 import styles from "./WeatherResult.module.scss";
 
 const cx = classNames.bind(styles);
 
-const WeatherResult = ({ weatherData, loading }) => {
+const WeatherResult = ({ weatherData, loading, onClose }) => {
 	const { t } = useTranslation();
 
 	const getWeatherIcon = (weatherCode) => {
@@ -43,106 +44,109 @@ const WeatherResult = ({ weatherData, loading }) => {
 	);
 
 	return (
-	<div className={cx("weather-result")}>
-		<div className={cx("weather-main")}>
-			{getWeatherIcon(weatherData.weather[0].id)}
-			<div className={cx("temperature")}>{Math.round(weatherData.main.temp)}°C</div>
-			<WeatherDescription />
-			<div className={cx("location")}>
-				{weatherData.name}, {weatherData.sys.country}
-			</div>
-		</div>
-
-		<div className={cx("weather-details-grid")}>
-			<div className={cx("detail-card")}>
-				<div className={cx("detail-info")}>
-					<span>
-						<WiThermometer />
-						{t("home.weatherDetails.temperature.title")}
-					</span>
-					<div>
-						<div>
-							{t("home.weatherDetails.temperature.current")}: {weatherData.main.temp}°C
-						</div>
-						<div>
-							{t("home.weatherDetails.temperature.feelsLike")}: {weatherData.main.feels_like}
-							°C
-						</div>
-						<div>
-							{t("home.weatherDetails.temperature.min")}: {weatherData.main.temp_min}°C
-						</div>
-						<div>
-							{t("home.weatherDetails.temperature.max")}: {weatherData.main.temp_max}°C
-						</div>
-					</div>
+		<div className={cx("weather-result")}>
+			<button onClick={onClose} className={cx("close-button")}>
+				<IoCloseCircle />
+			</button>
+			<div className={cx("weather-main")}>
+				{getWeatherIcon(weatherData.weather[0].id)}
+				<div className={cx("temperature")}>{Math.round(weatherData.main.temp)}°C</div>
+				<WeatherDescription />
+				<div className={cx("location")}>
+					{weatherData.name}, {weatherData.sys.country}
 				</div>
 			</div>
 
-			<div className={cx("detail-card")}>
-				<div className={cx("detail-info")}>
-					<span>
-						<WiCloudy />
-						{t("home.weatherDetails.atmosphere.title")}
-					</span>
-					<div>
+			<div className={cx("weather-details-grid")}>
+				<div className={cx("detail-card")}>
+					<div className={cx("detail-info")}>
+						<span>
+							<WiThermometer />
+							{t("home.weatherDetails.temperature.title")}
+						</span>
 						<div>
-							{t("home.weatherDetails.atmosphere.clouds")}: {weatherData.clouds.all}%
-						</div>
-						<div>
-							{t("home.weatherDetails.atmosphere.humidity")}: {weatherData.main.humidity}%
-						</div>
-						<div>
-							{t("home.weatherDetails.atmosphere.pressure")}: {weatherData.main.pressure} hPa
-						</div>
-						<div>
-							{t("home.weatherDetails.atmosphere.visibility")}:{" "}
-							{weatherData.visibility / 1000} km
-						</div>
-					</div>
-				</div>
-			</div>
-
-			<div className={cx("detail-card")}>
-				<div className={cx("detail-info")}>
-					<span>
-						<WiStrongWind />
-						{t("home.weatherDetails.wind.title")}
-					</span>
-					<div>
-						<div>
-							{t("home.weatherDetails.wind.speed")}: {weatherData.wind.speed} m/s
-						</div>
-						<div>
-							{t("home.weatherDetails.wind.direction")}: {weatherData.wind.deg}°
-						</div>
-						{weatherData.wind.gust && (
 							<div>
-								{t("home.weatherDetails.wind.gust")}: {weatherData.wind.gust} m/s
+								{t("home.weatherDetails.temperature.current")}: {weatherData.main.temp}°C
 							</div>
-						)}
+							<div>
+								{t("home.weatherDetails.temperature.feelsLike")}: {weatherData.main.feels_like}
+								°C
+							</div>
+							<div>
+								{t("home.weatherDetails.temperature.min")}: {weatherData.main.temp_min}°C
+							</div>
+							<div>
+								{t("home.weatherDetails.temperature.max")}: {weatherData.main.temp_max}°C
+							</div>
+						</div>
 					</div>
 				</div>
-			</div>
 
-			<div className={cx("detail-card")}>
-				<div className={cx("detail-info")}>
-					<span>
-						<WiSunrise />
-						{t("home.weatherDetails.sun.title")}
-					</span>
-					<div>
+				<div className={cx("detail-card")}>
+					<div className={cx("detail-info")}>
+						<span>
+							<WiCloudy />
+							{t("home.weatherDetails.atmosphere.title")}
+						</span>
 						<div>
-							{t("home.weatherDetails.sun.sunrise")}: {formatTime(weatherData.sys.sunrise)}
+							<div>
+								{t("home.weatherDetails.atmosphere.clouds")}: {weatherData.clouds.all}%
+							</div>
+							<div>
+								{t("home.weatherDetails.atmosphere.humidity")}: {weatherData.main.humidity}%
+							</div>
+							<div>
+								{t("home.weatherDetails.atmosphere.pressure")}: {weatherData.main.pressure} hPa
+							</div>
+							<div>
+								{t("home.weatherDetails.atmosphere.visibility")}:{" "}
+								{weatherData.visibility / 1000} km
+							</div>
 						</div>
+					</div>
+				</div>
+
+				<div className={cx("detail-card")}>
+					<div className={cx("detail-info")}>
+						<span>
+							<WiStrongWind />
+							{t("home.weatherDetails.wind.title")}
+						</span>
 						<div>
-							{t("home.weatherDetails.sun.sunset")}: {formatTime(weatherData.sys.sunset)}
+							<div>
+								{t("home.weatherDetails.wind.speed")}: {weatherData.wind.speed} m/s
+							</div>
+							<div>
+								{t("home.weatherDetails.wind.direction")}: {weatherData.wind.deg}°
+							</div>
+							{weatherData.wind.gust && (
+								<div>
+									{t("home.weatherDetails.wind.gust")}: {weatherData.wind.gust} m/s
+								</div>
+							)}
+						</div>
+					</div>
+				</div>
+
+				<div className={cx("detail-card")}>
+					<div className={cx("detail-info")}>
+						<span>
+							<WiSunrise />
+							{t("home.weatherDetails.sun.title")}
+						</span>
+						<div>
+							<div>
+								{t("home.weatherDetails.sun.sunrise")}: {formatTime(weatherData.sys.sunrise)}
+							</div>
+							<div>
+								{t("home.weatherDetails.sun.sunset")}: {formatTime(weatherData.sys.sunset)}
+							</div>
 						</div>
 					</div>
 				</div>
 			</div>
 		</div>
-	</div>
-);
+	);
 };
 
 export default WeatherResult;
