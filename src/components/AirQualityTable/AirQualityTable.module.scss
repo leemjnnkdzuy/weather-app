@@ -1,0 +1,72 @@
+.table {
+	border-radius: 8px;
+	width: 100%;
+	border-collapse: collapse;
+	background: var(--background-color);
+	box-shadow: 0 1px 3px var(--shadow-color);
+
+
+	th,
+	td {
+		&:nth-child(1) {
+			width: 100px;
+			min-width: 50px;
+		}
+	}
+	th,
+	td {
+		padding: 12px;
+		text-align: left;
+		border-bottom: 1px solid var(--border-color);
+		color: var(--text-color);
+
+		&:nth-child(6) {
+			width: 150px;
+			min-width: 100px;
+		}
+	}
+
+	th {
+		background: var(--background-secondary);
+		font-weight: 600;
+		cursor: pointer;
+
+		&:hover {
+			background: var(--background-hover);
+		}
+	}
+}
+
+.pm25Value {
+	padding: 4px 8px;
+	border-radius: 4px;
+	font-weight: 500;
+	display: inline-block;
+	width: 100%;
+	text-align: center;
+
+	&.good {
+		background: var(--aqi-good);
+		color: #000;
+	}
+	&.moderate {
+		background: var(--aqi-moderate);
+		color: #000;
+	}
+	&.unhealthySensitive {
+		background: var(--aqi-sensitive);
+		color: #000;
+	}
+	&.unhealthy {
+		background: var(--aqi-unhealthy);
+		color: #fff;
+	}
+	&.veryUnhealthy {
+		background: var(--aqi-very-unhealthy);
+		color: #fff;
+	}
+	&.hazardous {
+		background: var(--aqi-hazardous);
+		color: #fff;
+	}
+}

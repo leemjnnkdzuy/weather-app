@@ -14,43 +14,66 @@
 		"language": "Language"
 	},
 	"home": {
-	"title": "Weather Forecast",
-	"subtitle": "Enter a city name to get weather information",
-	"searchPlaceholder": "Search for a city...",
-	"searchButton": "Search",
-	"weatherInfo": {
-		"temperature": "Temperature",
-		"humidity": "Humidity",
-		"windSpeed": "Wind Speed",
-		"pressure": "Pressure"
-	},
-	"weatherDetails": {
-		"temperature": {
-			"title": "Temperature",
-			"current": "Current",
-			"feelsLike": "Feels like",
-			"min": "Min",
-			"max": "Max"
-		},
-		"wind": {
-			"title": "Wind",
-			"speed": "Speed",
-			"direction": "Direction",
-			"gust": "Gust"
-		},
-		"sun": {
-			"title": "Sun",
-			"sunrise": "Sunrise",
-			"sunset": "Sunset"
-		},
-		"atmosphere": {
-			"title": "Atmosphere",
-			"clouds": "Clouds",
+		"title": "Weather Forecast",
+		"subtitle": "Enter a city name to get weather information",
+		"searchPlaceholder": "Search for a city...",
+		"searchButton": "Search",
+		"weatherInfo": {
+			"temperature": "Temperature",
 			"humidity": "Humidity",
-			"pressure": "Pressure",
-			"visibility": "Visibility"
-		}
+			"windSpeed": "Wind Speed",
+			"pressure": "Pressure"
+		},
+		"weatherDetails": {
+			"temperature": {
+				"title": "Temperature",
+				"current": "Current",
+				"feelsLike": "Feels like",
+				"min": "Min",
+				"max": "Max"
+			},
+			"wind": {
+				"title": "Wind",
+				"speed": "Speed",
+				"direction": "Direction",
+				"gust": "Gust"
+			},
+			"sun": {
+				"title": "Sun",
+				"sunrise": "Sunrise",
+				"sunset": "Sunset"
+			},
+			"atmosphere": {
+				"title": "Atmosphere",
+				"clouds": "Clouds",
+				"humidity": "Humidity",
+				"pressure": "Pressure",
+				"visibility": "Visibility"
+			}
+		},
+		"useLocation": "Your Location"
 	},
-	"useLocation": "Your Location"
-}
+	"airQualityRanking": {
+		"title": "World Air Quality Ranking",
+		"search": "Search by city or country...",
+		"loading": "Loading air quality data...",
+		"columns": {
+			"rank": "Rank",
+			"city": "City",
+			"state": "State",
+			"country": "Country",
+			"pm25": "PM2.5",
+			"quality": "Quality",
+			"followers": "Followers",
+			"lastUpdated": "Last Updated"
+		},
+		"quality": {
+			"good": "Good",
+			"moderate": "Moderate",
+			"unhealthySensitive": "Unhealthy for Sensitive Groups",
+			"unhealthy": "Unhealthy",
+			"veryUnhealthy": "Very Unhealthy",
+			"hazardous": "Hazardous"
+		}
+	}
 }

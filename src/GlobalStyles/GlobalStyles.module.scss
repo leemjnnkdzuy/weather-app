@@ -12,6 +12,14 @@
 	--active-bg: rgba(0, 123, 255, 0.1);
 	--header-height: 60px;
 	--component-bg: #ffffff;
+
+	// AQI Colors
+	--aqi-good: #a8e6cf;
+	--aqi-moderate: #ffd3b6;
+	--aqi-sensitive: #ffaaa5;
+	--aqi-unhealthy: #ff6b6b;
+	--aqi-very-unhealthy: #845ec2;
+	--aqi-hazardous: #d62246;
 }
 
 [data-theme="dark"] {

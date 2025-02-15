@@ -89,46 +89,45 @@ export const weatherService = {
 };
 
 const CLOUDFLARE_WORKER =
-	"https://worldairqualityranking-api.leemjnnkdzuy.live/";
+	"https://worldairqualityranking-api.leemjnnkdzuy.live";
 
 export const airQualityService = {
-	getWorldRanking: async () => {
+	getWorldRanking: async (page = 1, perPage = 100) => {
 		try {
-			const response = await axios.get(`${CLOUDFLARE_WORKER}/countries/rankings`, {
-				params: {
-					sortBy: "aqi",
-					sortOrder: "desc",
-					page: 1,
-					perPage: 100,
-					display: "full",
-					"units.temperature": "celsius",
-					"units.distance": "kilometer",
-					"units.pressure": "millibar",
-					"units.system": "metric",
-					AQI: "US",
-					language: "vi",
-				},
+			page = Math.min(Math.max(parseInt(page), 1), 100);
+			perPage = Math.min(Math.max(parseInt(perPage), 1), 100);
+
+			const response = await axios.get(`${CLOUDFLARE_WORKER}/rankings`, {
+				params: { page, perPage },
 			});
 
-			if (!response.data?.data) {
-				throw new Error("No air quality data available");
+			const dataArray = response.data;
+			if (!Array.isArray(dataArray)) {
+				throw new Error("Invalid response format");
 			}
 
-			return response.data.data.map((item, index) => ({
-				id: index + 1,
-				city: item.city,
-				country: item.country,
-				value: item.current.pollution.aqius,
-				coordinates: {
-					latitude: item.location.coordinates[1],
-					longitude: item.location.coordinates[0],
+			return {
+				data: dataArray.map((item) => ({
+					id: item.id,
+					city: item.city,
+					state: item.state,
+					country: item.country,
+					value: item.aqi,
+					flagURL: item.flagURL,
+					provider: "AirVisual",
+					followersCount: item.followersCount,
+					updatedAt: item.updatedAt,
+					rank: item.rank,
+				})),
+				pagination: {
+					currentPage: page,
+					perPage: perPage,
+					totalItems: dataArray.length,
 				},
-				lastUpdated: item.current.pollution.ts,
-				provider: "AirVisual",
-			}));
+			};
 		} catch (error) {
-			console.error("Error fetching air quality data:", error.message);
-			throw new Error("Unable to fetch air quality data. Please try again later.");
+			console.error("Error fetching air quality data:", error.response || error);
+			throw error.response?.data?.message || error.message || "Failed to fetch data";
 		}
 	},
 };

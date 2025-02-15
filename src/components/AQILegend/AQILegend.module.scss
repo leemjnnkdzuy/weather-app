@@ -1,0 +1,62 @@
+.wrapper {
+	display: flex;
+	gap: 4px;
+	flex-wrap: nowrap;
+	margin-bottom: 20px;
+	width: 100%;
+}
+
+.aqi-legend {
+	flex: 1;
+	padding: 8px 4px;
+	border-radius: 4px;
+	min-width: 0;
+	text-align: center;
+
+	&.bg-green {
+		background-color: var(--aqi-good);
+		color: #000;
+	}
+
+	&.bg-yellow {
+		background-color: var(--aqi-moderate);
+		color: #000;
+	}
+
+	&.bg-orange {
+		background-color: var(--aqi-sensitive);
+		color: #000;
+	}
+
+	&.bg-red {
+		background-color: var(--aqi-unhealthy);
+		color: #fff;
+	}
+
+	&.bg-purple {
+		background-color: var(--aqi-very-unhealthy);
+		color: #fff;
+	}
+
+	&.bg-maroon {
+		background-color: var(--aqi-hazardous);
+		color: #fff;
+	}
+}
+
+.aqi-legend-range {
+	font-weight: bold;
+	margin: 0;
+}
+
+.aqi-legend-label {
+	margin: 4px 0 0;
+	font-size: 0.9em;
+	white-space: nowrap;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	padding: 0 4px;
+	white-space: normal;
+	word-wrap: break-word;
+	word-break: break-all;
+}

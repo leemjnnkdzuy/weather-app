@@ -53,5 +53,28 @@
 			"location": "Vị trí"
 		},
 		"useLocation": "Vị Trí Của Bạn"
+	},
+	"airQualityRanking": {
+		"title": "Xếp Hạng Chất Lượng Không Khí Thế Giới",
+		"search": "Tìm kiếm theo thành phố hoặc quốc gia...",
+		"loading": "Đang tải dữ liệu chất lượng không khí...",
+		"columns": {
+			"rank": "Xếp hạng",
+			"city": "Thành phố",
+			"state": "Tỉnh/Bang",
+			"country": "Quốc gia",
+			"pm25": "PM2.5",
+			"quality": "Chất lượng",
+			"followers": "Người theo dõi",
+			"lastUpdated": "Cập nhật lúc"
+		},
+		"quality": {
+			"good": "Tốt",
+			"moderate": "Trung bình",
+			"unhealthySensitive": "Kém",
+			"unhealthy": "Xấu",
+			"veryUnhealthy": "Rất xấu",
+			"hazardous": "Nguy hiểm"
+		}
 	}
 }

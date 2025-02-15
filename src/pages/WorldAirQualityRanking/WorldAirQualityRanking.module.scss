@@ -2,6 +2,7 @@
 	padding: 20px;
 	max-width: 1200px;
 	margin: 0 auto;
+	color: var(--text-color);
 }
 
 .header {
@@ -9,7 +10,7 @@
 
 	h1 {
 		font-size: 28px;
-		color: #333;
+		color: var(--text-color);
 	}
 }
 
@@ -21,32 +22,70 @@
 
 .searchInput {
 	padding: 8px 12px;
-	border: 1px solid #ddd;
+	border: 1px solid var(--border-color);
 	border-radius: 4px;
 	width: 300px;
+	background: var(--background-color);
+	color: var(--text-color);
+
+	&::placeholder {
+		color: var(--text-secondary);
+	}
 }
 
 .table {
 	width: 100%;
 	border-collapse: collapse;
-	background: white;
-	box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+	background: var(--background-color);
+	box-shadow: 0 1px 3px var(--shadow-color);
 
 	th,
 	td {
 		padding: 12px;
 		text-align: left;
-		border-bottom: 1px solid #eee;
+		border-bottom: 1px solid var(--border-color);
+		color: var(--text-color);
 	}
 
 	th {
-		background: #f5f5f5;
+		background: var(--background-secondary);
 		font-weight: 600;
 		cursor: pointer;
 
 		&:hover {
-			background: #eee;
+			background: var(--background-hover);
 		}
+	}
+}
+
+.loading {
+	position: relative;
+	min-height: 100px;
+	color: transparent;
+	pointer-events: none;
+
+	&::after {
+		content: "";
+		position: absolute;
+		width: 30px;
+		height: 30px;
+		top: 50%;
+		left: 50%;
+		transform: translate(-50%, -50%);
+		border: 3px solid var(--text-color);
+		border-radius: 50%;
+		border-top-color: transparent;
+		border-left-color: transparent;
+		animation: spin 0.8s ease infinite;
+	}
+}
+
+@keyframes spin {
+	from {
+		transform: translate(-50%, -50%) rotate(0deg);
+	}
+	to {
+		transform: translate(-50%, -50%) rotate(360deg);
 	}
 }
 
