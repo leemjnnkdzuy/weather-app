@@ -6,6 +6,7 @@ import styles from "./WorldAirQualityRanking.module.scss";
 import { airQualityService } from "../../utils/request";
 import AirQualityTable from "../../components/AirQualityTable";
 import AQILegend from "../../components/AQILegend";
+import { MdKeyboardArrowLeft, MdKeyboardArrowRight } from "react-icons/md";
 
 const cx = classNames.bind(styles);
 
@@ -15,15 +16,24 @@ function WorldAirQualityRanking() {
 	const [cities, setCities] = useState([]);
 	const [loading, setLoading] = useState(true);
 	const [searchTerm, setSearchTerm] = useState("");
+	const [perPage, setPerPage] = useState(20);
 	const [sortConfig, setSortConfig] = useState({
 		key: "value",
 		direction: "desc",
 	});
 
+	const handlePerPageChange = (delta) => {
+		const newValue = perPage + delta;
+		if (newValue >= 10 && newValue <= 100) {
+			setPerPage(newValue);
+		}
+	};
+
 	useEffect(() => {
 		const fetchAirQualityData = async () => {
+			setLoading(true);
 			try {
-				const response = await airQualityService.getWorldRanking();
+				const response = await airQualityService.getWorldRanking(1, perPage);
 				const processedData = response.data.map((item) => ({
 					...item,
 					lastUpdated: new Date(item.updatedAt).toLocaleString("vi-VN"),
@@ -37,7 +47,7 @@ function WorldAirQualityRanking() {
 		};
 
 		fetchAirQualityData();
-	}, []);
+	}, [perPage]);
 
 	const handleSort = (key) => {
 		const direction =
@@ -74,10 +84,19 @@ function WorldAirQualityRanking() {
 					value={searchTerm}
 					onChange={(e) => setSearchTerm(e.target.value)}
 				/>
+				<div className={cx("pagination-controls")}>
+					<button onClick={() => handlePerPageChange(-10)} disabled={perPage <= 10}>
+						<MdKeyboardArrowLeft size={24} />
+					</button>
+					<span>{perPage} items</span>
+					<button onClick={() => handlePerPageChange(10)} disabled={perPage >= 100}>
+						<MdKeyboardArrowRight size={24} />
+					</button>
+				</div>
 			</div>
 
 			{loading ? (
-				<div className={cx("loading")}>{t("airQualityRanking.loading")}</div>
+				<div className={cx("loading")}></div>
 			) : (
 				<AirQualityTable
 					cities={filteredCities}
