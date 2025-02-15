@@ -7,6 +7,7 @@ import NotFound from "../pages/NotFound";
 import Home from "../pages/Home";
 import StormAndHydrometeorologicalForecasting from "../pages/StormAndHydrometeorologicalForecasting";
 import WorldAirQualityRanking from "../pages/WorldAirQualityRanking";
+import AirQualityPages from "../pages/AirQualityPages";
 
 const publicRoutes = [
 	{
@@ -28,7 +29,12 @@ const publicRoutes = [
 		path: "/world-air-quality-ranking",
 		component: WorldAirQualityRanking,
 		layout: DefaultLayout,
-	}
+	},
+	{
+		path: "/air-quality/:cityId",
+		component: AirQualityPages,
+		layout: DefaultLayout,
+	},
 ];
 
 export { publicRoutes };

@@ -34,8 +34,8 @@ function WorldAirQualityRanking() {
 		{ value: "city-desc", label: t("airQualityRanking.sort.cityDesc") },
 	];
 
-	const handleSortChange = (e) => {
-		const [key, direction] = e.target.value.split("-");
+	const handleSortChange = (value) => {
+		const [key, direction] = value.split("-");
 		setSortConfig({ key, direction });
 	};
 

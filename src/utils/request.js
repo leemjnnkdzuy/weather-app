@@ -130,6 +130,21 @@ export const airQualityService = {
 			throw error.response?.data?.message || error.message || "Failed to fetch data";
 		}
 	},
+
+	getCityDetails: async (cityId, lang = "en") => {
+		try {
+			const response = await axios.get(`${CLOUDFLARE_WORKER}/cities/${cityId}`, {
+				params: { language: lang },
+			});
+
+			return response.data;
+		} catch (error) {
+			console.error("Error fetching city details:", error.response || error);
+			throw (
+				error.response?.data?.message || error.message || "Failed to fetch city details"
+			);
+		}
+	},
 };
 
 export default weatherService;

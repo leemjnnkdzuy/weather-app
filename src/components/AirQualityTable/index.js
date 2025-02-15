@@ -1,11 +1,13 @@
 import { useTranslation } from "react-i18next";
 import classNames from "classnames/bind";
 import styles from "./AirQualityTable.module.scss";
+import { useNavigate } from "react-router-dom";
 
 const cx = classNames.bind(styles);
 
-function AirQualityTable({ cities, onSort }) {
+function AirQualityTable({ cities, sortConfig, onSort }) {
 	const { t } = useTranslation();
+	const navigate = useNavigate();
 
 	const getQualityClass = (value) => {
 		if (value <= 50) return "good";
@@ -14,6 +16,9 @@ function AirQualityTable({ cities, onSort }) {
 		if (value <= 200) return "unhealthy";
 		if (value <= 300) return "veryUnhealthy";
 		return "hazardous";
+	};
+	const handleRowClick = (cityId) => {
+		navigate(`/air-quality/${cityId}`);
 	};
 
 	return (
@@ -36,7 +41,7 @@ function AirQualityTable({ cities, onSort }) {
 				</thead>
 				<tbody>
 					{cities.map((city) => (
-						<tr key={city.id}>
+						<tr key={city.id} onClick={() => handleRowClick(city.id)} className={cx("row")}>
 							<td>
 								<span className={cx("label")}>{t("airQualityRanking.columns.rank")}: </span>
 								{city.rank}

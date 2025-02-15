@@ -67,8 +67,20 @@
 			"pm25": "PM2.5",
 			"quality": "Chất lượng",
 			"followers": "Người theo dõi",
-			"lastUpdated": "Cập nhật lúc"
+			"lastUpdated": "Cập nhật lúc",
+			"concentration": "Nồng độ",
+			"pollutants": {
+				"title": "Chất gây ô nhiễm không khí",
+				"subtitle": "Chất lượng không khí hiện tại ở {{city}} ra sao?",
+				"pm25": "Bụi mịn PM₂.₅",
+				"pm10": "Bụi thô PM₁₀",
+				"o3": "Ozon (O₃)",
+				"no2": "Nitơ đioxit (NO₂)",
+				"so2": "Lưu huỳnh đioxit (SO₂)",
+				"co": "Cacbon monoxit (CO)"
+			}
 		},
+		"status": "Tình trạng",
 		"quality": {
 			"good": "Tốt",
 			"moderate": "Trung bình",
@@ -85,6 +97,18 @@
 			"aqiDesc": "AQI: Cao đến Thấp",
 			"cityAsc": "Thành phố: A đến Z",
 			"cityDesc": "Thành phố: Z đến A"
+		},
+		"mainPollutant": "Chất ô nhiễm chính",
+		"forecast": {
+			"sevenDay": "Dự báo 7 ngày tới",
+			"hourly": "Dự báo theo giờ"
+		},
+		"recommendations": {
+			"health": "Khuyến nghị sức khỏe",
+			"description": "Những điều cần làm để bảo vệ sức khỏe"
 		}
+	},
+	"common": {
+		"back": "Quay lại"
 	}
 }

@@ -66,6 +66,50 @@ export default {
 			}
 		}
 
+		if (url.pathname.startsWith("/cities/")) {
+			const AIRVISUAL_API = "https://website-api.airvisual.com/v1";
+			const urlParams = new URLSearchParams(url.search);
+			const language = urlParams.get("language") || "en";
+
+			const params = new URLSearchParams({
+				"units.temperature": "celsius",
+				"units.distance": "kilometer",
+				"units.pressure": "millibar",
+				"units.system": "metric",
+				AQI: "US",
+				language: language,
+			});
+
+			const targetUrl = `${AIRVISUAL_API}${url.pathname}?${params.toString()}`;
+
+			try {
+				const response = await fetch(targetUrl);
+				const data = await response.json();
+
+				return new Response(JSON.stringify(data), {
+					headers: {
+						"Content-Type": "application/json",
+						"Access-Control-Allow-Origin": "*",
+						"Cache-Control": "max-age=300",
+					},
+				});
+			} catch (error) {
+				return new Response(
+					JSON.stringify({
+						error: "Failed to fetch city data",
+						details: error.message,
+					}),
+					{
+						status: 500,
+						headers: {
+							"Content-Type": "application/json",
+							"Access-Control-Allow-Origin": "*",
+						},
+					}
+				);
+			}
+		}
+
 		const AIRVISUAL_API = "https://website-api.airvisual.com/v1";
 		const targetUrl = `${AIRVISUAL_API}${url.pathname}${url.search}`;
 

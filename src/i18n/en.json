@@ -49,7 +49,8 @@
 				"humidity": "Humidity",
 				"pressure": "Pressure",
 				"visibility": "Visibility"
-			}
+			},
+			"location": "Location"
 		},
 		"useLocation": "Your Location",
 		"emptyInputError": "Please enter a city name"
@@ -66,8 +67,20 @@
 			"pm25": "PM2.5",
 			"quality": "Quality",
 			"followers": "Followers",
-			"lastUpdated": "Last Updated"
+			"lastUpdated": "Last Updated",
+			"concentration": "Concentration",
+			"pollutants": {
+				"title": "Air Pollutants",
+				"subtitle": "How is the current air quality in {{city}}?",
+				"pm25": "Fine particles PM₂.₅",
+				"pm10": "Coarse particles PM₁₀",
+				"o3": "Ozone (O₃)",
+				"no2": "Nitrogen dioxide (NO₂)",
+				"so2": "Sulfur dioxide (SO₂)",
+				"co": "Carbon monoxide (CO)"
+			}
 		},
+		"status": "Status",
 		"quality": {
 			"good": "Good",
 			"moderate": "Moderate",
@@ -84,6 +97,18 @@
 			"aqiDesc": "AQI: High to Low",
 			"cityAsc": "City: A to Z",
 			"cityDesc": "City: Z to A"
+		},
+		"mainPollutant": "Main Pollutant",
+		"forecast": {
+			"sevenDay": "7-Day Forecast",
+			"hourly": "Hourly Forecast"
+		},
+		"recommendations": {
+			"health": "Health Recommendations",
+			"description": "What to do to protect your health"
 		}
+	},
+	"common": {
+		"back": "Back"
 	}
 }
