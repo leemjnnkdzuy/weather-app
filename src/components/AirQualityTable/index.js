@@ -17,54 +17,73 @@ function AirQualityTable({ cities, onSort }) {
 	};
 
 	return (
-		<table className={cx("table")}>
-			<thead>
-				<tr>
-					<th onClick={() => onSort("rank")}>{t("airQualityRanking.columns.rank")}</th>
-					<th onClick={() => onSort("city")}>{t("airQualityRanking.columns.city")}</th>
-					<th onClick={() => onSort("state")}>{t("airQualityRanking.columns.state")}</th>
-					<th onClick={() => onSort("country")}>
-						{t("airQualityRanking.columns.country")}
-					</th>
-					<th onClick={() => onSort("value")}>{t("airQualityRanking.columns.pm25")}</th>
-					<th onClick={() => onSort("followersCount")}>
-						{t("airQualityRanking.columns.followers")}
-					</th>
-					<th>{t("airQualityRanking.columns.lastUpdated")}</th>
-				</tr>
-			</thead>
-			<tbody>
-				{cities.map((city) => (
-					<tr key={city.id}>
-						<td>{city.rank}</td>
-						<td>{city.city}</td>
-						<td>{city.state}</td>
-						<td>
-							{city.flagURL && (
-								<img
-									src={city.flagURL}
-									alt={city.country}
-									style={{
-										width: 20,
-										marginRight: 8,
-										verticalAlign: "middle",
-									}}
-									title={city.country}
-								/>
-							)}
-							{city.country}
-						</td>
-						<td>
-							<span className={cx("pm25Value", getQualityClass(city.value))}>
-								{city.value}
-							</span>
-						</td>
-						<td>{city.followersCount.toLocaleString()}</td>
-						<td>{city.lastUpdated}</td>
+		<div className={cx("tableContainer")}>
+			<table className={cx("table")}>
+				<thead>
+					<tr>
+						<th onClick={() => onSort("rank")}>{t("airQualityRanking.columns.rank")}</th>
+						<th onClick={() => onSort("city")}>{t("airQualityRanking.columns.city")}</th>
+						<th onClick={() => onSort("state")}>{t("airQualityRanking.columns.state")}</th>
+						<th onClick={() => onSort("country")}>
+							{t("airQualityRanking.columns.country")}
+						</th>
+						<th onClick={() => onSort("value")}>{t("airQualityRanking.columns.pm25")}</th>
+						<th onClick={() => onSort("followersCount")}>
+							{t("airQualityRanking.columns.followers")}
+						</th>
+						<th>{t("airQualityRanking.columns.lastUpdated")}</th>
 					</tr>
-				))}
-			</tbody>
-		</table>
+				</thead>
+				<tbody>
+					{cities.map((city) => (
+						<tr key={city.id}>
+							<td>
+								<span className={cx("label")}>{t("airQualityRanking.columns.rank")}: </span>
+								{city.rank}
+							</td>
+							<td>
+								<span className={cx("label")}>{t("airQualityRanking.columns.city")}: </span>
+								{city.city}
+							</td>
+							<td>{city.state}</td>
+							<td>
+								<span className={cx("label")}>{t("airQualityRanking.columns.country")}: </span>
+								{city.flagURL && (
+									<img
+										src={city.flagURL}
+										alt={city.country}
+										style={{
+											width: 20,
+											marginRight: 8,
+											verticalAlign: "middle",
+										}}
+										title={city.country}
+									/>
+								)}
+								{city.country}
+							</td>
+							<td>
+								<span className={cx("pm25Value", getQualityClass(city.value))}>
+									{city.value}
+								</span>
+							</td>
+							<td>
+								<span className={cx("label")}>
+									{t("airQualityRanking.columns.followers")}:{" "}
+								</span>
+								{city.followersCount.toLocaleString()}
+							</td>
+							<td>
+								<span className={cx("label")}>
+									{t("airQualityRanking.columns.lastUpdated")}:{" "}
+								</span>
+								{city.lastUpdated}
+							</td>
+						</tr>
+					))}
+				</tbody>
+			</table>
+		</div>
 	);
 }
 

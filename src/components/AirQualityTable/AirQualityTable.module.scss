@@ -4,6 +4,11 @@
 	border-collapse: collapse;
 	background: var(--background-color);
 	box-shadow: 0 1px 3px var(--shadow-color);
+	display: block;
+
+	.label {
+		display: none;
+	}
 
 	thead {
 		background: var(--background-secondary);
@@ -38,7 +43,6 @@
 		}
 	}
 	th,
-
 	th {
 		background: var(--background-secondary);
 		font-weight: 600;
@@ -51,8 +55,7 @@
 
 	@media (max-width: 835px) {
 		display: block;
-		overflow-x: auto;
-		-webkit-overflow-scrolling: touch;
+		overflow: hidden;
 		font-size: 13px;
 
 		th,
@@ -60,6 +63,10 @@
 			padding: 6px;
 			font-size: 14px;
 			white-space: nowrap;
+
+			::before {
+				display: none;
+			}
 
 			&:nth-child(1) {
 				width: 40px;
@@ -112,7 +119,7 @@
 			margin-bottom: 12px;
 			padding: 16px;
 			border-radius: 12px;
-			box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+			border: 2px solid rgba(var(--border-color-rgb), 0.5);
 		}
 
 		td {
@@ -122,46 +129,32 @@
 			border: none;
 			font-size: 14px;
 
+			.label {
+				min-width: 90px;
+				font-weight: 500;
+				color: var(--text-secondary);
+				font-size: 13px;
+				display: none;
+				margin-right: 40px;
+
+				@media (max-width: 835px) {
+					display: inline;
+				}
+			}
+
 			&:not(:last-child) {
 				border-bottom: 1px solid rgba(var(--border-color-rgb), 0.1);
 			}
 
-			&:nth-child(1)::before {
-				content: "Rank: ";
-				font-weight: 600;
-			}
-			&:nth-child(2)::before {
-				content: "City: ";
-				font-weight: 600;
-			}
-			&:nth-child(4)::before {
-				content: "Country: ";
-				font-weight: 600;
-			}
 			&:nth-child(5) {
 				margin: 4px 0;
 				justify-content: center;
 				border: none;
 				padding: 12px 0;
 			}
-			&:nth-child(6)::before {
-				content: "Followers: ";
-				font-weight: 600;
-			}
-			&:nth-child(7)::before {
-				content: "Updated: ";
-				font-weight: 600;
-			}
 
 			&:nth-child(3) {
 				display: none;
-			}
-
-			&::before {
-				min-width: 90px;
-				font-weight: 500;
-				color: var(--text-secondary);
-				font-size: 13px;
 			}
 
 			&:last-of-type {
@@ -230,4 +223,9 @@
 	}
 
 	transition: transform 0.2s ease;
+}
+
+.tableContainer {
+	width: 100%;
+	overflow: hidden;
 }

@@ -47,6 +47,14 @@
 		align-items: stretch;
 		padding-top: 12px;
 		margin-bottom: 12px;
+		width: 100%;
+	}
+
+	@media (max-width: 835px) {
+		display: flex;
+		flex-direction: column;
+		gap: 16px;
+		width: 100%;
 	}
 }
 
@@ -69,6 +77,10 @@
 
 	&::placeholder {
 		color: var(--text-secondary);
+	}
+
+	@media (max-width: 835px) {
+		width: 100%;
 	}
 
 	@media (max-width: 768px) {
@@ -143,5 +155,24 @@
 	span {
 		min-width: 80px;
 		text-align: center;
+	}
+
+	@media (max-width: 835px) {
+		width: 100%;
+		justify-content: space-between;
+		padding: 8px 16px;
+		background: var(--background-color);
+		border-radius: 8px;
+		box-shadow: 0 1px 3px var(--shadow-color);
+
+		button {
+			padding: 8px;
+			flex: 0 0 auto;
+		}
+
+		span {
+			flex: 1;
+			text-align: center;
+		}
 	}
 }
