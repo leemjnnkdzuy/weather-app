@@ -71,7 +71,7 @@
 		"quality": {
 			"good": "Good",
 			"moderate": "Moderate",
-			"unhealthySensitive": "Unhealthy for Sensitive Groups",
+			"unhealthySensitive": "Concern",
 			"unhealthy": "Unhealthy",
 			"veryUnhealthy": "Very Unhealthy",
 			"hazardous": "Hazardous"
