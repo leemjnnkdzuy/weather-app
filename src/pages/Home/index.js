@@ -27,6 +27,13 @@ function Home() {
 			return;
 		}
 
+		const forbiddenSearches = ["demacia", "shigashine", "Shigashine", "Demacia"];
+		if (forbiddenSearches.includes(searchQuery.toLowerCase())) {
+			setError("con di me may");
+			setShowErrorPopup(true);
+			return;
+		}
+
 		setLoading(true);
 		setError(null);
 		try {
