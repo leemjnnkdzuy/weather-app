@@ -51,7 +51,8 @@
 				"visibility": "Visibility"
 			}
 		},
-		"useLocation": "Your Location"
+		"useLocation": "Your Location",
+		"emptyInputError": "Please enter a city name"
 	},
 	"airQualityRanking": {
 		"title": "World Air Quality Ranking",

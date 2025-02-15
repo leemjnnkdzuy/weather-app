@@ -52,7 +52,8 @@
 			},
 			"location": "Vị trí"
 		},
-		"useLocation": "Vị Trí Của Bạn"
+		"useLocation": "Vị Trí Của Bạn",
+		"emptyInputError": "Vui lòng nhập tên thành phố"
 	},
 	"airQualityRanking": {
 		"title": "Xếp Hạng Chất Lượng Không Khí Thế Giới",

@@ -68,14 +68,14 @@ export const weatherService = {
 		}
 	},
 
-	getLocationSuggestions: async (query) => {
+	getLocationSuggestions: async (query, lang = "en") => {
 		if (!query || query.length < 2) return [];
 		try {
 			const response = await axios.get(
-				`https://api.openweathermap.org/geo/1.0/direct?q=${query}&limit=5&appid=${API_KEY}`
+				`https://api.openweathermap.org/geo/1.0/direct?q=${query}&limit=5&appid=${API_KEY}&lang=${lang}`
 			);
 			return response.data.map((item) => ({
-				name: item.local_names?.en || item.name,
+				name: item.local_names?.[lang] || item.name,
 				fullName: `${item.name}, ${item.country}`,
 				lat: item.lat,
 				lon: item.lon,
@@ -92,13 +92,13 @@ const CLOUDFLARE_WORKER =
 	"https://worldairqualityranking-api.leemjnnkdzuy.live";
 
 export const airQualityService = {
-	getWorldRanking: async (page = 1, perPage = 100) => {
+	getWorldRanking: async (page = 1, perPage = 100, lang = "en") => {
 		try {
 			page = Math.min(Math.max(parseInt(page), 1), 100);
 			perPage = Math.min(Math.max(parseInt(perPage), 1), 100);
 
 			const response = await axios.get(`${CLOUDFLARE_WORKER}/rankings`, {
-				params: { page, perPage },
+				params: { page, perPage, language: lang },
 			});
 
 			const dataArray = response.data;

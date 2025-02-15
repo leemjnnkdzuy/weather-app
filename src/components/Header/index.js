@@ -19,7 +19,9 @@ function Header() {
 	const location = useLocation();
 
 	const toggleLanguage = () => {
-		i18n.changeLanguage(i18n.language === "en" ? "vi" : "en");
+		const newLang = i18n.language === "en" ? "vi" : "en";
+		i18n.changeLanguage(newLang);
+		window.dispatchEvent(new CustomEvent("languageChange", { detail: newLang }));
 	};
 
 	const handleLogoClick = () => {

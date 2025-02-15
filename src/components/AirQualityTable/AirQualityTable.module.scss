@@ -5,6 +5,9 @@
 	background: var(--background-color);
 	box-shadow: 0 1px 3px var(--shadow-color);
 
+	thead {
+		background: var(--background-secondary);
+	}
 
 	th,
 	td {
@@ -13,6 +16,7 @@
 			min-width: 50px;
 		}
 	}
+
 	th,
 	td {
 		padding: 12px;
@@ -26,6 +30,15 @@
 		}
 	}
 
+	th,
+	td {
+		&:nth-child(7) {
+			width: 200px;
+			min-width: 100px;
+		}
+	}
+	th,
+
 	th {
 		background: var(--background-secondary);
 		font-weight: 600;
@@ -33,6 +46,144 @@
 
 		&:hover {
 			background: var(--background-hover);
+		}
+	}
+
+	@media (max-width: 835px) {
+		display: block;
+		overflow-x: auto;
+		-webkit-overflow-scrolling: touch;
+		font-size: 13px;
+
+		th,
+		td {
+			padding: 6px;
+			font-size: 14px;
+			white-space: nowrap;
+
+			&:nth-child(1) {
+				width: 40px;
+				min-width: 40px;
+			}
+
+			&:nth-child(2) {
+				min-width: 100px;
+			}
+
+			&:nth-child(3) {
+				display: none;
+			}
+
+			&:nth-child(4) {
+				min-width: 80px;
+			}
+
+			&:nth-child(5) {
+				min-width: 60px;
+			}
+
+			&:nth-child(6) {
+				width: 100px;
+				min-width: 70px;
+			}
+
+			&:nth-child(7) {
+				min-width: 90px;
+			}
+		}
+
+		border-radius: 0;
+		background: transparent;
+		box-shadow: none;
+
+		thead {
+			display: none;
+		}
+
+		tbody {
+			display: block;
+		}
+
+		tr {
+			display: grid;
+			grid-template-columns: 1fr;
+			gap: 8px;
+			background: var(--background-color);
+			margin-bottom: 12px;
+			padding: 16px;
+			border-radius: 12px;
+			box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+		}
+
+		td {
+			display: flex;
+			align-items: center;
+			padding: 8px 0;
+			border: none;
+			font-size: 14px;
+
+			&:not(:last-child) {
+				border-bottom: 1px solid rgba(var(--border-color-rgb), 0.1);
+			}
+
+			&:nth-child(1)::before {
+				content: "Rank: ";
+				font-weight: 600;
+			}
+			&:nth-child(2)::before {
+				content: "City: ";
+				font-weight: 600;
+			}
+			&:nth-child(4)::before {
+				content: "Country: ";
+				font-weight: 600;
+			}
+			&:nth-child(5) {
+				margin: 4px 0;
+				justify-content: center;
+				border: none;
+				padding: 12px 0;
+			}
+			&:nth-child(6)::before {
+				content: "Followers: ";
+				font-weight: 600;
+			}
+			&:nth-child(7)::before {
+				content: "Updated: ";
+				font-weight: 600;
+			}
+
+			&:nth-child(3) {
+				display: none;
+			}
+
+			&::before {
+				min-width: 90px;
+				font-weight: 500;
+				color: var(--text-secondary);
+				font-size: 13px;
+			}
+
+			&:last-of-type {
+				border-bottom: none;
+			}
+		}
+	}
+
+	tbody {
+		tr {
+			transition: background-color 0.2s ease, transform 0.2s ease;
+
+			@media (min-width: 769px) {
+				&:hover {
+					background-color: var(--background-hover);
+					box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+
+					td {
+						background-color: var(--background-hover);
+					}
+				}
+			}
 		}
 	}
 }
@@ -69,4 +220,14 @@
 		background: var(--aqi-hazardous);
 		color: #fff;
 	}
+
+	@media (max-width: 835px) {
+		padding: 12px 16px;
+		font-size: 16px;
+		width: auto;
+		min-width: 120px;
+		font-weight: 600;
+	}
+
+	transition: transform 0.2s ease;
 }

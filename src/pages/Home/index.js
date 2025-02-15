@@ -5,6 +5,7 @@ import styles from "./Home.module.scss";
 import weatherService from "../../utils/request";
 import WeatherResult from "../../components/WeatherResult";
 import SearchForm from "../../components/SearchForm";
+import Popup from "../../components/Popup";
 
 const cx = classNames.bind(styles);
 
@@ -16,10 +17,15 @@ function Home() {
 	const [error, setError] = useState(null);
 	const [suggestions, setSuggestions] = useState([]);
 	const [showSuggestions, setShowSuggestions] = useState(false);
+	const [showEmptyInputPopup, setShowEmptyInputPopup] = useState(false);
+	const [showErrorPopup, setShowErrorPopup] = useState(false);
 
 	const handleSearch = async (e) => {
 		e.preventDefault();
-		if (!searchQuery.trim()) return;
+		if (!searchQuery.trim()) {
+			setShowEmptyInputPopup(true);
+			return;
+		}
 
 		setLoading(true);
 		setError(null);
@@ -33,6 +39,7 @@ function Home() {
 			setWeatherData((prev) => ({ ...prev, airQuality: airData.list[0] }));
 		} catch (err) {
 			setError(err.message || "Error fetching weather data");
+			setShowErrorPopup(true);
 		} finally {
 			setLoading(false);
 		}
@@ -165,7 +172,6 @@ function Home() {
 					t={t}
 				/>
 
-				{error && <div className={cx("error-message")}>{error}</div>}
 				{weatherData && (
 					<WeatherResult
 						weatherData={weatherData}
@@ -174,6 +180,18 @@ function Home() {
 					/>
 				)}
 			</div>
+
+			{showEmptyInputPopup && (
+				<Popup
+					message={t("home.emptyInputError")}
+					type="error"
+					onClose={() => setShowEmptyInputPopup(false)}
+				/>
+			)}
+
+			{showErrorPopup && error && (
+				<Popup message={error} type="error" onClose={() => setShowErrorPopup(false)} />
+			)}
 		</div>
 	);
 }

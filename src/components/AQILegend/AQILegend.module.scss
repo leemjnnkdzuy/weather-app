@@ -1,9 +1,26 @@
 .wrapper {
+	position: sticky;
+	top: 80px;
+	z-index: 99;
+	background: var(--background-color);
+	margin: -20px -20px;
+	margin-bottom: 0;
+	padding: 20px;
 	display: flex;
-	gap: 4px;
-	flex-wrap: nowrap;
-	margin-bottom: 20px;
-	width: 100%;
+	gap: 12px;
+	flex-wrap: wrap;
+	transition: all 0.3s ease;
+	border-radius: 8px;
+
+	&.sticky {
+		box-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
+	}
+
+	@media (max-width: 768px) {
+		margin: -8px -8px 8px -8px;
+		padding: 12px 8px;
+		gap: 8px;
+	}
 }
 
 .aqi-legend {
@@ -16,6 +33,29 @@
 	flex-direction: column;
 	justify-content: center;
 	align-items: center;
+	cursor: pointer;
+	transition: transform 0.2s ease, opacity 0.2s ease, box-shadow 0.2s ease,
+		scale 0.2s ease;
+	opacity: 0.85;
+
+	&:hover {
+		opacity: 1;
+		box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+	}
+
+	&:not(.active):hover {
+		box-shadow: var(--box-shadow);
+	}
+
+	&:not(.active) {
+		opacity: 0.8;
+	}
+
+	&.active {
+		opacity: 1;
+		scale: 1.05;
+		box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+	}
 
 	&.bg-green {
 		background-color: var(--aqi-good);
@@ -46,11 +86,24 @@
 		background-color: var(--aqi-hazardous);
 		color: #fff;
 	}
+
+	@media (max-width: 768px) {
+		padding: 8px 4px;
+
+		&.active {
+			scale: 1.02;
+			margin: 0 2px;
+		}
+	}
 }
 
 .aqi-legend-range {
 	font-weight: bold;
 	margin: 0;
+
+	@media (max-width: 768px) {
+		font-size: 12px;
+	}
 }
 
 .aqi-legend-label {
@@ -63,4 +116,10 @@
 	white-space: normal;
 	word-wrap: break-word;
 	word-break: break-all;
+
+	@media (max-width: 768px) {
+		font-size: 11px;
+		margin: 4px 0 0;
+		line-height: 1.2;
+	}
 }

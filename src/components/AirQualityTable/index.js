@@ -1,25 +1,8 @@
 import { useTranslation } from "react-i18next";
-import Flags from "country-flag-icons/react/3x2";
 import classNames from "classnames/bind";
 import styles from "./AirQualityTable.module.scss";
 
 const cx = classNames.bind(styles);
-
-const getCountryCode = (country) => {
-	const countryMap = {
-		"Ấn Độ": "IN",
-		"Trung Hoa": "CN",
-		"Ả-rập Xê-út": "SA",
-		"Nê-pan": "NP",
-		"Việt Nam": "VN",
-		"Nhật Bản": "JP",
-		"Hàn Quốc": "KR",
-		"Thái Lan": "TH",
-		Indonesia: "ID",
-		Malaysia: "MY",
-	};
-	return countryMap[country] || "US";
-};
 
 function AirQualityTable({ cities, onSort }) {
 	const { t } = useTranslation();
@@ -51,38 +34,35 @@ function AirQualityTable({ cities, onSort }) {
 				</tr>
 			</thead>
 			<tbody>
-				{cities.map((city) => {
-					const countryCode = getCountryCode(city.country);
-					const FlagComponent = Flags[countryCode];
-
-					return (
-						<tr key={city.id}>
-							<td>{city.rank}</td>
-							<td>{city.city}</td>
-							<td>{city.state}</td>
-							<td>
-								{FlagComponent && (
-									<FlagComponent
-										style={{
-											width: 20,
-											marginRight: 8,
-											verticalAlign: "middle",
-										}}
-										title={city.country}
-									/>
-								)}
-								{city.country}
-							</td>
-							<td>
-								<span className={cx("pm25Value", getQualityClass(city.value))}>
-									{city.value}
-								</span>
-							</td>
-							<td>{city.followersCount.toLocaleString()}</td>
-							<td>{city.lastUpdated}</td>
-						</tr>
-					);
-				})}
+				{cities.map((city) => (
+					<tr key={city.id}>
+						<td>{city.rank}</td>
+						<td>{city.city}</td>
+						<td>{city.state}</td>
+						<td>
+							{city.flagURL && (
+								<img
+									src={city.flagURL}
+									alt={city.country}
+									style={{
+										width: 20,
+										marginRight: 8,
+										verticalAlign: "middle",
+									}}
+									title={city.country}
+								/>
+							)}
+							{city.country}
+						</td>
+						<td>
+							<span className={cx("pm25Value", getQualityClass(city.value))}>
+								{city.value}
+							</span>
+						</td>
+						<td>{city.followersCount.toLocaleString()}</td>
+						<td>{city.lastUpdated}</td>
+					</tr>
+				))}
 			</tbody>
 		</table>
 	);

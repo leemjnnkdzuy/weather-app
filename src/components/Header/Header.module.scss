@@ -5,7 +5,7 @@
 	right: 0;
 	height: 60px;
 	padding: 0 24px;
-	z-index: 100;
+	z-index: 1000; // Increased z-index to ensure it's always on top
 	backdrop-filter: blur(8px);
 	background-color: var(--header-bg);
 	border-bottom: 1px solid var(--border-color);

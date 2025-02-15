@@ -22,12 +22,10 @@ export default {
 			});
 		}
 
-		// Update the API endpoint for rankings
 		if (url.pathname === "/rankings") {
 			const AIRVISUAL_API = "https://website-api.airvisual.com/v1";
 			const params = new URLSearchParams(url.search);
 
-			// Get page and perPage from query or use defaults
 			const page = Math.min(
 				Math.max(parseInt(params.get("page") || "1", 10), 1),
 				100
@@ -36,8 +34,9 @@ export default {
 				Math.max(parseInt(params.get("perPage") || "50", 10), 1),
 				100
 			);
+			const language = params.get("language") || "en";
 
-			const targetUrl = `${AIRVISUAL_API}/countries/rankings?sortBy=aqi&sortOrder=desc&page=${page}&perPage=${perPage}&display=full&units.temperature=celsius&units.distance=kilometer&units.pressure=millibar&units.system=metric&AQI=US&language=vi`;
+			const targetUrl = `${AIRVISUAL_API}/countries/rankings?sortBy=aqi&sortOrder=desc&page=${page}&perPage=${perPage}&display=full&units.temperature=celsius&units.distance=kilometer&units.pressure=millibar&units.system=metric&AQI=US&language=${language}`;
 
 			try {
 				const response = await fetch(targetUrl);

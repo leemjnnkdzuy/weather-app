@@ -12,6 +12,8 @@
 	--active-bg: rgba(0, 123, 255, 0.1);
 	--header-height: 60px;
 	--component-bg: #ffffff;
+	--box-shadow: 0 2px 8px rgba(0, 0, 0, 0.5);
+	--background-hover: rgb(212, 212, 212);
 
 	// AQI Colors
 	--aqi-good: #a8e6cf;
@@ -31,6 +33,8 @@
 	--active-color: #4dabf7;
 	--active-bg: rgba(77, 171, 247, 0.1);
 	--component-bg: #1a1a1a;
+	--box-shadow: 0 0 8px rgba(255, 255, 255, 0.5);
+	--background-hover: rgba(0, 0, 0, 0.7);
 }
 
 * {
