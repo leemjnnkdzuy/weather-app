@@ -76,6 +76,15 @@
 			"unhealthy": "Xấu",
 			"veryUnhealthy": "Rất xấu",
 			"hazardous": "Nguy hiểm"
+		},
+		"sort": {
+			"label": "Sắp xếp theo",
+			"rankAsc": "Xếp hạng: Thấp đến Cao",
+			"rankDesc": "Xếp hạng: Cao đến Thấp",
+			"aqiAsc": "AQI: Thấp đến Cao",
+			"aqiDesc": "AQI: Cao đến Thấp",
+			"cityAsc": "Thành phố: A đến Z",
+			"cityDesc": "Thành phố: Z đến A"
 		}
 	}
 }

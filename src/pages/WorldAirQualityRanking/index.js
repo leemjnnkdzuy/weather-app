@@ -7,6 +7,8 @@ import { airQualityService } from "../../utils/request";
 import AirQualityTable from "../../components/AirQualityTable";
 import AQILegend from "../../components/AQILegend";
 import { MdKeyboardArrowLeft, MdKeyboardArrowRight } from "react-icons/md";
+import { IoSearchOutline } from "react-icons/io5";
+import CustomDropdown from "../../components/CustomDropdown";
 
 const cx = classNames.bind(styles);
 
@@ -22,6 +24,20 @@ function WorldAirQualityRanking() {
 		direction: "asc",
 	});
 	const [selectedRanges, setSelectedRanges] = useState([]);
+
+	const sortOptions = [
+		{ value: "rank-asc", label: t("airQualityRanking.sort.rankAsc") },
+		{ value: "rank-desc", label: t("airQualityRanking.sort.rankDesc") },
+		{ value: "value-asc", label: t("airQualityRanking.sort.aqiAsc") },
+		{ value: "value-desc", label: t("airQualityRanking.sort.aqiDesc") },
+		{ value: "city-asc", label: t("airQualityRanking.sort.cityAsc") },
+		{ value: "city-desc", label: t("airQualityRanking.sort.cityDesc") },
+	];
+
+	const handleSortChange = (e) => {
+		const [key, direction] = e.target.value.split("-");
+		setSortConfig({ key, direction });
+	};
 
 	const handlePerPageChange = (delta) => {
 		const newValue = perPage + delta;
@@ -123,13 +139,16 @@ function WorldAirQualityRanking() {
 			<AQILegend onRangeSelect={handleRangeSelect} selectedRanges={selectedRanges} />
 
 			<div className={cx("controls")}>
-				<input
-					type="text"
-					placeholder={t("airQualityRanking.search")}
-					className={cx("searchInput")}
-					value={searchTerm}
-					onChange={(e) => setSearchTerm(e.target.value)}
-				/>
+				<div className={cx("search-box")}>
+					<IoSearchOutline size={20} className={cx("search-icon")} />
+					<input
+						type="text"
+						placeholder={t("airQualityRanking.search")}
+						className={cx("searchInput")}
+						value={searchTerm}
+						onChange={(e) => setSearchTerm(e.target.value)}
+					/>
+				</div>
 				<div className={cx("pagination-controls")}>
 					<button onClick={() => handlePerPageChange(-10)} disabled={perPage <= 10}>
 						<MdKeyboardArrowLeft size={24} />
@@ -141,6 +160,15 @@ function WorldAirQualityRanking() {
 				</div>
 			</div>
 
+			<div className={cx("sort-wrapper")}>
+				<CustomDropdown
+					options={sortOptions}
+					value={`${sortConfig.key}-${sortConfig.direction}`}
+					onChange={handleSortChange}
+					placeholder={t("airQualityRanking.sort.label")}
+				/>
+			</div>
+
 			{loading ? (
 				<div className={cx("loading")}></div>
 			) : (
@@ -148,6 +176,7 @@ function WorldAirQualityRanking() {
 					cities={filteredCities}
 					sortConfig={sortConfig}
 					onSort={handleSort}
+					className={cx("table-header")}
 				/>
 			)}
 		</div>

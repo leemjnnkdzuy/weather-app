@@ -75,6 +75,15 @@
 			"unhealthy": "Unhealthy",
 			"veryUnhealthy": "Very Unhealthy",
 			"hazardous": "Hazardous"
+		},
+		"sort": {
+			"label": "Sort by",
+			"rankAsc": "Rank: Low to High",
+			"rankDesc": "Rank: High to Low",
+			"aqiAsc": "AQI: Low to High",
+			"aqiDesc": "AQI: High to Low",
+			"cityAsc": "City: A to Z",
+			"cityDesc": "City: Z to A"
 		}
 	}
 }
