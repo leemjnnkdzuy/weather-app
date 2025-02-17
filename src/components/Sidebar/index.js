@@ -9,6 +9,7 @@ import { WiDayThunderstorm, WiDaySunny } from "react-icons/wi";
 import { MdAir } from "react-icons/md";
 import { BsSun, BsMoonStars } from "react-icons/bs";
 import styles from "./Sidebar.module.scss";
+import BackButton from "../BackButton";
 
 const cx = classNames.bind(styles);
 
@@ -47,11 +48,19 @@ function Sidebar() {
 		setIsOpen(false);
 	};
 
+	const isHomePage = location.pathname === "/";
+
 	return (
 		<>
-			<button className={cx("toggle-button")} onClick={toggleSidebar}>
-				<HiMenuAlt2 />
-			</button>
+			{isHomePage ? (
+				<button className={cx("toggle-button")} onClick={toggleSidebar}>
+					<HiMenuAlt2 />
+				</button>
+			) : (
+				<div className={cx("mobile-back-button")}>
+					<BackButton />
+				</div>
+			)}
 			<div className={cx("sidebar", { open: isOpen })}>
 				<div className={cx("sidebar-header")}>
 					<div className={cx("logo-section")} onClick={() => handleNavigate("/")}>

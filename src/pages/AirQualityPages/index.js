@@ -20,7 +20,6 @@ import {
 	WiNightFog,
 } from "react-icons/wi";
 import { formatPollutantName } from "../../utils/formatters";
-import BackButton from "../../components/BackButton";
 
 const cx = classNames.bind(styles);
 
@@ -311,7 +310,6 @@ function AirQualityPages() {
 
 	return (
 		<div className={cx("container")}>
-			<BackButton />
 			<div className={cx("top-section")}>
 				{renderLocationInfo()}
 				{renderCurrentAirQuality()}
