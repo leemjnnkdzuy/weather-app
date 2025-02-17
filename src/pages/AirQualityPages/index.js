@@ -32,6 +32,15 @@ const getAQIStatus = (aqi) => {
 	return "hazardous";
 };
 
+const getAQIClassName = (aqi) => {
+	if (aqi <= 50) return "good";
+	if (aqi <= 100) return "moderate";
+	if (aqi <= 150) return "sensitive";
+	if (aqi <= 200) return "unhealthy";
+	if (aqi <= 300) return "very-unhealthy";
+	return "hazardous";
+};
+
 function AirQualityPages() {
 	const { cityId } = useParams();
 	const { t, i18n } = useTranslation();
@@ -52,15 +61,6 @@ function AirQualityPages() {
 
 		fetchCityData();
 	}, [cityId, i18n.language]);
-
-	const getAQIClassName = (aqi) => {
-		if (aqi <= 50) return "good";
-		if (aqi <= 100) return "moderate";
-		if (aqi <= 150) return "sensitive";
-		if (aqi <= 200) return "unhealthy";
-		if (aqi <= 300) return "very-unhealthy";
-		return "hazardous";
-	};
 
 	const getWeatherIcon = (condition, icon) => {
 		const isNight = icon.includes("night");
