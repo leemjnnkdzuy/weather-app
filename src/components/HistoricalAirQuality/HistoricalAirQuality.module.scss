@@ -1,0 +1,330 @@
+.historical-card {
+	background: var(--background-secondary-color);
+	border-radius: 12px;
+	padding: 24px;
+	margin: 24px 0;
+}
+
+.card-header {
+	margin-bottom: 20px;
+}
+
+.title-group {
+	display: flex;
+	flex-direction: column;
+	gap: 8px;
+	margin-bottom: 16px;
+
+	.title {
+		font-size: 14px;
+		color: var(--text-color);
+		opacity: 0.7;
+	}
+
+	.description {
+		font-size: 20px;
+		font-weight: 600;
+		color: var(--text-color);
+	}
+}
+
+.controls {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	background: var(--background-color);
+	padding: 8px;
+	border-radius: 8px;
+	min-height: 115px;
+}
+
+.metric-selector {
+	display: flex;
+	gap: 8px;
+
+	.metric-button {
+		padding: 8px 16px;
+		border: 1px solid var(--border-color);
+		border-radius: 8px;
+		background: var(--background-color);
+		color: var(--text-color);
+		font-size: 14px;
+		cursor: pointer;
+		transition: all 0.2s ease;
+
+		&:hover {
+			border-color: var(--active-color);
+			background: var(--background-secondary-color);
+		}
+
+		&.active {
+			background: var(--active-color);
+			border-color: var(--active-color);
+			color: white;
+		}
+
+		&:focus {
+			outline: none;
+			box-shadow: 0 0 0 2px var(--active-color-transparent);
+		}
+	}
+}
+
+.tooltip {
+	background: var(--background-color);
+	border-radius: 8px;
+	padding: 12px;
+	min-width: 200px;
+	box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+
+	&__top {
+		margin-bottom: 8px;
+	}
+
+	&__dot-title {
+		display: flex;
+		align-items: center;
+		gap: 8px;
+		margin-bottom: 4px;
+	}
+
+	&__dot {
+		width: 12px;
+		height: 12px;
+		border-radius: 50%;
+
+		&.good {
+			background-color: var(--aqi-good);
+		}
+		&.moderate {
+			background-color: var(--aqi-moderate);
+		}
+		&.sensitive {
+			background-color: var(--aqi-sensitive);
+		}
+		&.unhealthy {
+			background-color: var(--aqi-unhealthy);
+		}
+		&.very-unhealthy {
+			background-color: var(--aqi-very-unhealthy);
+		}
+		&.hazardous {
+			background-color: var(--aqi-hazardous);
+		}
+	}
+
+	&__title {
+		font-size: 16px;
+		font-weight: 600;
+	}
+
+	&__label {
+		display: block;
+		font-size: 14px;
+		color: var(--text-color);
+		opacity: 0.7;
+		margin-left: 20px;
+	}
+
+	&__timestamp {
+		font-size: 12px;
+		color: var(--text-color);
+		opacity: 0.6;
+	}
+
+	.tooltip-header {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		margin-bottom: 8px;
+
+		.tooltip-value {
+			font-size: 20px;
+			font-weight: 600;
+
+			.unit {
+				font-size: 14px;
+				opacity: 0.7;
+				margin-left: 4px;
+			}
+		}
+
+		.quality {
+			padding: 4px 8px;
+			border-radius: 4px;
+			font-size: 14px;
+
+			&.good {
+				background: var(--aqi-good);
+			}
+			&.moderate {
+				background: var(--aqi-moderate);
+			}
+			&.sensitive {
+				background: var(--aqi-sensitive);
+				color: #fff;
+			}
+			&.unhealthy {
+				background: var(--aqi-unhealthy);
+				color: #fff;
+			}
+			&.very-unhealthy {
+				background: var(--aqi-very-unhealthy);
+				color: #fff;
+			}
+			&.hazardous {
+				background: var(--aqi-hazardous);
+				color: #fff;
+			}
+		}
+	}
+
+	.tooltip-time {
+		font-size: 12px;
+		opacity: 0.7;
+	}
+}
+
+.pollutant-tooltip {
+	background: var(--background-color);
+	border-radius: 8px;
+	padding: 12px;
+	min-width: 200px;
+	box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+
+	&__top {
+		margin-bottom: 8px;
+	}
+
+	&__dot-title {
+		display: flex;
+		align-items: center;
+		gap: 8px;
+		margin-bottom: 4px;
+	}
+
+	&__dot {
+		width: 12px;
+		height: 12px;
+		border-radius: 50%;
+		margin-right: 8px;
+		background-color: var(--text-color);
+
+		&.aqi-box-green {
+			background-color: #00e400;
+		}
+		&.aqi-box-yellow {
+			background-color: #ffff00;
+		}
+		&.aqi-box-orange {
+			background-color: #ff7e00;
+		}
+		&.aqi-box-red {
+			background-color: #ff0000;
+		}
+		&.aqi-box-purple {
+			background-color: #8f3f97;
+		}
+		&.aqi-box-maroon {
+			background-color: #7e0023;
+		}
+
+		// Add these new classes
+		&.humidity-dry {
+			background-color: #ffb6c1;
+		}
+
+		&.humidity-normal {
+			background-color: #90ee90;
+		}
+
+		&.humidity-humid {
+			background-color: #87ceeb;
+		}
+	}
+
+	&__title {
+		font-size: 16px;
+		font-weight: 600;
+		color: var(--text-color);
+	}
+
+	&__label {
+		display: block;
+		font-size: 14px;
+		color: var(--text-color);
+		opacity: 0.7;
+		margin-left: 20px;
+	}
+
+	&__timestamp {
+		font-size: 12px;
+		color: var(--text-color);
+		opacity: 0.6;
+	}
+}
+
+.chart-wrapper {
+	position: relative;
+
+	.current-metric {
+		position: absolute;
+		right: 8px;
+		top: 8px;
+		font-size: 12px;
+		color: var(--text-color);
+		opacity: 0.7;
+	}
+}
+
+@keyframes spin {
+	0% {
+		transform: translate(-50%, -50%) rotate(0deg);
+	}
+	100% {
+		transform: translate(-50%, -50%) rotate(360deg);
+	}
+}
+
+.chart-container {
+	position: relative;
+	margin-top: 20px;
+	border-radius: 8px;
+	overflow: hidden;
+	background: var(--background-color);
+}
+
+.chart-transition {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background: var(--background-color);
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	opacity: 0;
+	pointer-events: none;
+	transition: opacity 0.3s ease;
+	z-index: 10;
+
+	&.active {
+		opacity: 1;
+		pointer-events: all;
+	}
+
+	&::after {
+		content: "";
+		position: absolute;
+		width: 30px;
+		height: 30px;
+		top: 50%;
+		left: 50%;
+		transform: translate(-50%, -50%);
+		border: 3px solid var(--text-color);
+		border-radius: 50%;
+		border-top-color: transparent;
+		animation: spin 0.8s linear infinite;
+	}
+}

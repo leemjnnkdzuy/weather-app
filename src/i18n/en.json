@@ -106,9 +106,39 @@
 		"recommendations": {
 			"health": "Health Recommendations",
 			"description": "What to do to protect your health"
+		},
+		"historical": {
+			"title": "History",
+			"description": "Historical air quality chart for {{city}}",
+			"timeTypes": {
+				"hourly": "Hourly",
+				"daily": "Daily"
+			},
+			"metrics": {
+				"AQI_US": "US AQI⁺",
+				"TEMPERATURE": "Temperature (°C)",
+				"HUMIDITY": "Humidity (%)"
+			},
+			"localTime": "Local Time"
 		}
 	},
 	"common": {
 		"back": "Back"
+	},
+	"metrics": {
+		"temperature": {
+			"cold": "Cold",
+			"cool": "Cool",
+			"moderate": "Moderate",
+			"warm": "Warm",
+			"hot": "Hot"
+		},
+		"humidity": {
+			"dry": "Dry",
+			"comfortable": "Comfortable",
+			"moderate": "Moderate",
+			"humid": "Humid",
+			"veryHumid": "Very Humid"
+		}
 	}
 }

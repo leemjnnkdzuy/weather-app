@@ -1,0 +1,198 @@
+.location-info {
+	text-align: left;
+	margin-bottom: 0;
+	padding: 24px;
+	border-radius: 12px;
+	transition: all 0.3s ease;
+
+	.location-header {
+		display: flex;
+		justify-content: space-between;
+		align-items: flex-start;
+		margin-bottom: 16px;
+
+		.location-name {
+			h2 {
+				font-size: 32px;
+				margin: 0;
+				font-weight: 600;
+			}
+
+			span {
+				font-size: 16px;
+				opacity: 0.8;
+			}
+		}
+
+		.aqi-status-wrapper {
+			display: flex;
+			align-items: center;
+			gap: 16px;
+
+			.quality-status {
+				display: flex;
+				flex-direction: column;
+				align-items: flex-end;
+
+				.status-label {
+					font-size: 14px;
+					opacity: 0.8;
+					margin-bottom: 4px;
+				}
+
+				.status-value {
+					font-size: 16px;
+					font-weight: 600;
+				}
+			}
+
+			.aqi-badge {
+				background: rgba(255, 255, 255, 0.2);
+				padding: 8px 16px;
+				border-radius: 20px;
+				text-align: center;
+
+				.aqi-number {
+					display: block;
+					font-size: 24px;
+					font-weight: 600;
+					line-height: 1;
+				}
+
+				.aqi-text {
+					font-size: 14px;
+					opacity: 0.8;
+				}
+			}
+		}
+	}
+
+	.location-details {
+		display: flex;
+		gap: 24px;
+		font-size: 14px;
+
+		.coordinates,
+		.current-time {
+			display: flex;
+			align-items: center;
+			gap: 8px;
+
+			i {
+				opacity: 0.7;
+			}
+		}
+	}
+
+	.weather-section {
+		display: grid;
+		grid-template-columns: repeat(2, 1fr);
+		gap: 16px;
+		margin-top: 24px;
+		padding-top: 24px;
+		border-top: 1px solid rgba(255, 255, 255, 0.1);
+
+		.weather-item {
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+			gap: 12px;
+			text-align: center;
+			padding: 16px;
+			background: rgba(255, 255, 255, 0.1);
+			border-radius: 8px;
+			transition: transform 0.2s ease;
+
+			&.center-item {
+				grid-column: 1 / -1;
+				width: 50%;
+				margin: 0 auto;
+			}
+
+			.weather-info {
+				display: flex;
+				flex-direction: column;
+				gap: 4px;
+
+				.label {
+					font-size: 14px;
+					opacity: 0.8;
+					font-weight: normal;
+				}
+
+				.value {
+					font-size: 16px;
+					font-weight: 600;
+				}
+			}
+		}
+
+		@media (max-width: 480px) {
+			grid-template-columns: 1fr;
+
+			.weather-item.center-item {
+				width: 100%;
+			}
+		}
+	}
+
+	&.good {
+		background-color: var(--aqi-good);
+		color: #1a1a1a;
+	}
+
+	&.moderate {
+		background-color: var(--aqi-moderate);
+		color: #1a1a1a;
+	}
+
+	&.sensitive {
+		background-color: var(--aqi-sensitive);
+		color: #fff;
+	}
+
+	&.unhealthy {
+		background-color: var(--aqi-unhealthy);
+		color: #fff;
+	}
+
+	&.very-unhealthy {
+		background-color: var(--aqi-very-unhealthy);
+		color: #fff;
+	}
+
+	&.hazardous {
+		background-color: var(--aqi-hazardous);
+		color: #fff;
+	}
+
+	.main-indicators {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		gap: 32px;
+		margin-top: 16px;
+
+		.aqi-value {
+			text-align: center;
+
+			h1 {
+				font-size: 48px;
+				margin: 0;
+				line-height: 1;
+			}
+
+			p {
+				font-size: 18px;
+				margin-top: 4px;
+			}
+		}
+
+		.aqi-info {
+			text-align: left;
+			p {
+				margin: 4px 0;
+			}
+		}
+	}
+}

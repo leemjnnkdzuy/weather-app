@@ -20,7 +20,10 @@ import {
 	WiNightFog,
 } from "react-icons/wi";
 import { formatPollutantName } from "../../utils/formatters";
+
 import BackButton from "../../components/BackButton";
+import HistoricalAirQuality from "../../components/HistoricalAirQuality";
+import Recommendations from "../../components/Recommendations";
 
 const cx = classNames.bind(styles);
 
@@ -90,27 +93,41 @@ function AirQualityPages() {
 		}
 	};
 
-	const handleWheel = (event) => {
-		const container = event.currentTarget;
-		const isHorizontalScroll = Math.abs(event.deltaX) > Math.abs(event.deltaY);
-
-		if (!isHorizontalScroll) {
-			container.scrollLeft += event.deltaY;
-			if (
-				(container.scrollLeft === 0 && event.deltaY < 0) ||
-				(container.scrollLeft >= container.scrollWidth - container.clientWidth &&
-					event.deltaY > 0)
-			) {
-				return;
-			}
-			event.preventDefault();
-		}
-	};
-
 	useEffect(() => {
 		document.body.style.overflow = "auto";
 		return () => {
 			document.body.style.overflow = "auto";
+		};
+	}, []);
+
+	useEffect(() => {
+		const wheelOpts = { passive: false };
+		const forecastElement = document.querySelector(`.${cx("hourly-forecast")}`);
+
+		const handleWheelEvent = (event) => {
+			const isHorizontalScroll = Math.abs(event.deltaX) > Math.abs(event.deltaY);
+			if (!isHorizontalScroll) {
+				event.currentTarget.scrollLeft += event.deltaY;
+				if (
+					(event.currentTarget.scrollLeft === 0 && event.deltaY < 0) ||
+					(event.currentTarget.scrollLeft >=
+						event.currentTarget.scrollWidth - event.currentTarget.clientWidth &&
+						event.deltaY > 0)
+				) {
+					return;
+				}
+				event.preventDefault();
+			}
+		};
+
+		if (forecastElement) {
+			forecastElement.addEventListener("wheel", handleWheelEvent, wheelOpts);
+		}
+
+		return () => {
+			if (forecastElement) {
+				forecastElement.removeEventListener("wheel", handleWheelEvent, wheelOpts);
+			}
 		};
 	}, []);
 
@@ -226,7 +243,7 @@ function AirQualityPages() {
 	);
 
 	const renderHourlyForecast = () => (
-		<div className={cx("hourly-forecast")} onWheel={handleWheel}>
+		<div className={cx("hourly-forecast")}>
 			{cityData.forecasts.hourly.map((hour, index) => (
 				<div key={index} className={cx("forecast-hour")}>
 					<div className={cx("hour-time")}>{new Date(hour.ts).getHours()}:00</div>
@@ -282,28 +299,16 @@ function AirQualityPages() {
 		</div>
 	);
 
-	const renderRecommendations = () => (
-		<div className={cx("recommendations")}>
-			<div className={cx("recommendations-header")}>
-				<h3 className={cx("recommendations-title")}>
-					{t("airQualityRanking.recommendations.health")}
-				</h3>
-				<h3 className={cx("recommendations-subtitle")}>
-					{t("airQualityRanking.recommendations.description")}
-				</h3>
-			</div>
-			<div className={cx("recommendations-list")}>
-				{Object.entries(cityData.recommendations.pollution).map(
-					([key, value], index) => (
-						<div key={key} className={cx("recommendation-item", value.value)}>
-							<div className={cx("recommendation-number")}>{index + 1}</div>
-							<p>{value.text}</p>
-						</div>
-					)
-				)}
-			</div>
-		</div>
-	);
+	const getNearestHourData = (hourlyData) => {
+		const now = new Date();
+		return hourlyData.reduce((nearest, current) => {
+			const currentTime = new Date(current.ts);
+			const nearestTime = new Date(nearest.ts);
+			return Math.abs(currentTime - now) < Math.abs(nearestTime - now)
+				? current
+				: nearest;
+		});
+	};
 
 	if (loading || !cityData) {
 		return <div className={cx("loading")}></div>;
@@ -317,8 +322,45 @@ function AirQualityPages() {
 				{renderCurrentAirQuality()}
 			</div>
 			{renderHourlyForecast()}
+			{cityData.forecasts?.hourly && (
+				<HistoricalAirQuality
+					cityName={cityData.name}
+					data={cityData.forecasts.hourly.map((item) => ({
+						time: new Date(item.ts).toLocaleTimeString(),
+						metrics: {
+							AQI_US: {
+								value: item.aqi,
+								color:
+									item.aqi <= 50
+										? "#a8e05f"
+										: item.aqi <= 100
+										? "#fdd64b"
+										: item.aqi <= 150
+										? "#ff9b57"
+										: item.aqi <= 200
+										? "#fe6a69"
+										: item.aqi <= 300
+										? "#a97abc"
+										: "#a87383",
+							},
+							TEMPERATURE: {
+								value: item.temperature,
+								color: "#ff9b57",
+							},
+							HUMIDITY: {
+								value: item.humidity,
+								color: "#4dabf7",
+							},
+						},
+						quality: getAQIClassName(item.aqi),
+						qualityText: t(`airQualityRanking.quality.${getAQIStatus(item.aqi)}`),
+						timestamp: item.ts,
+					}))}
+					initialHoveredPoint={getNearestHourData(cityData.forecasts.hourly)}
+				/>
+			)}
 			{renderDailyForecast()}
-			{renderRecommendations()}
+			<Recommendations recommendations={cityData.recommendations} />
 		</div>
 	);
 }

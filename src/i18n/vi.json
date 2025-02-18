@@ -106,9 +106,39 @@
 		"recommendations": {
 			"health": "Khuyến nghị sức khỏe",
 			"description": "Những điều cần làm để bảo vệ sức khỏe"
+		},
+		"historical": {
+			"title": "Lịch sử",
+			"description": "Biểu đồ chất lượng lịch sử không khí cho {{city}}",
+			"timeTypes": {
+				"hourly": "Theo giờ",
+				"daily": "Theo ngày"
+			},
+			"metrics": {
+				"AQI_US": "AQI⁺ Mỹ",
+				"TEMPERATURE": "Nhiệt độ (°C)",
+				"HUMIDITY": "Độ ẩm (%)"
+			},
+			"localTime": "Giờ địa phương"
 		}
 	},
 	"common": {
 		"back": "Quay lại"
+	},
+	"metrics": {
+		"temperature": {
+			"cold": "Lạnh",
+			"cool": "Mát mẻ",
+			"moderate": "Ôn hòa",
+			"warm": "Ấm áp",
+			"hot": "Nóng"
+		},
+		"humidity": {
+			"dry": "Khô",
+			"comfortable": "Dễ chịu",
+			"moderate": "Trung bình",
+			"humid": "Ẩm ướt",
+			"veryHumid": "Rất ẩm"
+		}
 	}
 }
