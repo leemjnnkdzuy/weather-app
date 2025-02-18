@@ -1,0 +1,1446 @@
+{
+	"id": "vnxvinME52vNycse5",
+	"name": "Dhaka",
+	"country": "Bangladesh",
+	"zoomLevel": 10,
+	"breadcrumbs": [
+		{
+			"label": "Bangladesh",
+			"url": "/bangladesh"
+		},
+		{
+			"label": "Dhaka",
+			"url": "/bangladesh/dhaka"
+		}
+	],
+	"followers": {
+		"count": 263357,
+		"pictures": [
+			"https://cdn.airvisual.net/tiny/default.png",
+			"https://cdn.airvisual.net/tiny/default.png",
+			"https://cdn.airvisual.net/tiny/default.png",
+			"https://cdn.airvisual.net/tiny/default.png",
+			"https://cdn.airvisual.net/tiny/default.png"
+		]
+	},
+	"contributors": [
+		{
+			"type": "Contributor",
+			"name": "Bay Developments Ltd.",
+			"websiteURL": "https://www.baydevelopments.com",
+			"stationsCount": 1,
+			"pictureURL": "https://cdn.airvisual.net/assets/public-profiles/e57ffeb4-3e91-4423-96f1-72e70eaa2b26.png",
+			"followersCount": 79583,
+			"url": "profile/ja3joofjr",
+			"subtype": "Corporate"
+		},
+		{
+			"type": "Contributor",
+			"name": "Shanta Forum",
+			"stationsCount": 1,
+			"pictureURL": "https://lh3.googleusercontent.com/a/ACg8ocKiE5RcFMeDdSnmxLjSIt7Cg0FZlPt-cv0cvwK7KiVNPzb_XxQ=s96-c",
+			"followersCount": 883,
+			"url": "profile/-fwfclesn",
+			"subtype": "Corporate"
+		},
+		{
+			"type": "Government",
+			"name": "U.S. Embassy in Dhaka",
+			"websiteURL": "https://bd.usembassy.gov/",
+			"stationsCount": 1,
+			"pictureURL": "https://cdn.airvisual.net/assets/public-profiles/66c806704e411f38ec41d91c-avatar.png",
+			"followersCount": 75618,
+			"url": "profile/us-embassy-dhaka",
+			"subtype": "Diplomatic"
+		},
+		{
+			"type": "Contributor",
+			"name": "Smart Air Bangladesh",
+			"websiteURL": "https://smartairfilters.com/bd/en/shop/",
+			"stationsCount": 1,
+			"pictureURL": "https://cdn.airvisual.net/assets/public-profiles/403fc0d1-3888-4d7f-8d48-0c4d24f5fff9b",
+			"followersCount": 9488,
+			"url": "profile/oc4-jelo-",
+			"subtype": "Educational"
+		},
+		{
+			"type": "Contributor",
+			"name": "Grace International School",
+			"websiteURL": "https://grace.edu.bd",
+			"stationsCount": 1,
+			"pictureURL": "https://cdn.airvisual.net/tiny/1dafee4b-8c0c-4daa-9236-a2adb5c713bc.jpg",
+			"followersCount": 2919,
+			"url": "profile/-wmvrrvde",
+			"subtype": "Educational"
+		},
+		{
+			"type": "Contributor",
+			"name": "Shariful Islam",
+			"stationsCount": 1,
+			"pictureURL": "https://cdn.airvisual.net/tiny/468acda3-8619-4bc7-b603-5b8c1e800086.jpg",
+			"followersCount": 509,
+			"url": "profile/r5dybgwjv",
+			"subtype": "Individual"
+		},
+		{
+			"type": "Contributor",
+			"name": "Anonymous",
+			"websiteURL": "https://arced.foundation/",
+			"stationsCount": 3,
+			"pictureURL": "https://cdn.airvisual.net/tiny/827c591e-3665-4d24-80e8-0e123d94ba00.jpg",
+			"followersCount": 4563,
+			"url": "profile/mk5pxjnfm",
+			"subtype": "Non-profit organization"
+		},
+		{
+			"type": "Contributor",
+			"name": "Climate Change And Health icddr,b",
+			"websiteURL": "https://cch.icddrb.org/",
+			"stationsCount": 1,
+			"pictureURL": "https://cdn.airvisual.net/assets/public-profiles/623ffecc12bf9d3c323bc6ce-avatar.jpeg",
+			"followersCount": 4081,
+			"url": "profile/7xlwvqjkl",
+			"subtype": "Non-profit organization"
+		},
+		{
+			"name": "3 Anonymous contributors",
+			"url": "aivisual-s",
+			"pictureURL": "https://cdn.airvisual.net/tiny/default.png",
+			"type": "Anonymous",
+			"stationsCount": 3,
+			"followersCount": 0,
+			"subtype": "Anonymous"
+		}
+	],
+	"sources": [
+		{
+			"type": "Source",
+			"name": "IQAir",
+			"websiteURL": "https://www.iqair.com",
+			"stationsCount": 0,
+			"pictureURL": "https://cdn.airvisual.net/assets/public-profiles/5d318c2458908659d93142a9-avatar.png",
+			"followersCount": 46339639,
+			"url": "profile/airvisual-s",
+			"subtype": "Corporate"
+		},
+		{
+			"type": "Source",
+			"name": "PurpleAir",
+			"websiteURL": "https://www.purpleair.com/",
+			"stationsCount": 0,
+			"pictureURL": "https://cdn.airvisual.net/assets/public-profiles/5cb9494be613ee17724ccf7d-avatar.png",
+			"followersCount": 15471702,
+			"url": "profile/purpleair",
+			"subtype": "Corporate"
+		},
+		{
+			"type": "Source",
+			"name": "AirNow",
+			"websiteURL": "https://www.airnow.gov/",
+			"stationsCount": 0,
+			"pictureURL": "https://cdn.airvisual.net/assets/public-profiles/5cbd1f039c81b44dbbdccae0-avatar.png",
+			"followersCount": 15213568,
+			"url": "profile/airnow",
+			"subtype": "Government"
+		},
+		{
+			"type": "Government",
+			"name": "U.S. Embassy in Dhaka",
+			"websiteURL": "https://bd.usembassy.gov/",
+			"stationsCount": 1,
+			"pictureURL": "https://cdn.airvisual.net/assets/public-profiles/66c806704e411f38ec41d91c-avatar.png",
+			"followersCount": 75618,
+			"url": "profile/us-embassy-dhaka",
+			"subtype": "Diplomatic"
+		}
+	],
+	"timezone": "Asia/Dhaka",
+	"slug_state": "dhaka",
+	"isActive": true,
+	"anonymousContributorsCount": 3,
+	"activeStationsCount": 10,
+	"hasLowCostSensor": true,
+	"sourcesBanner": {
+		"stationsCount": 10,
+		"sourcesCount": 4,
+		"pictures": [
+			"https://cdn.airvisual.net/assets/public-profiles/e57ffeb4-3e91-4423-96f1-72e70eaa2b26.png",
+			"https://lh3.googleusercontent.com/a/ACg8ocKiE5RcFMeDdSnmxLjSIt7Cg0FZlPt-cv0cvwK7KiVNPzb_XxQ=s96-c",
+			"https://cdn.airvisual.net/assets/public-profiles/66c806704e411f38ec41d91c-avatar.png",
+			"https://cdn.airvisual.net/assets/public-profiles/403fc0d1-3888-4d7f-8d48-0c4d24f5fff9b",
+			"https://cdn.airvisual.net/tiny/1dafee4b-8c0c-4daa-9236-a2adb5c713bc.jpg",
+			"https://cdn.airvisual.net/tiny/468acda3-8619-4bc7-b603-5b8c1e800086.jpg"
+		],
+		"labels": ["11 Contributors"]
+	},
+	"facilities": {
+		"facilitiesCount": 0,
+		"isDefault": true,
+		"facilitiesList": [
+			{
+				"id": "65323726dbb46febddbe2433",
+				"pictures": [
+					"https://cdn.airvisual.net/assets/clean_air_facility/29ac4fb8-7a00-4c30-bd79-014fa6cb6789.png",
+					"https://cdn.airvisual.net/assets/clean_air_facility/ea9cde26-6cef-4334-a300-28be32a6f115.png",
+					"https://cdn.airvisual.net/assets/clean_air_facility/186aad21-9915-4462-a61e-6ac6e29c1aca.png"
+				],
+				"name": "Mercedes-Benz Group 梅赛德斯-奔驰利星行广场办公室",
+				"city": "Beijing",
+				"state": "Beijing",
+				"country": "China",
+				"profile": {
+					"name": "梅赛德斯-奔驰",
+					"url": "profile/mercedes-benz",
+					"slug": "mercedes-benz",
+					"profilePicture": "https://cdn.airvisual.net/assets/public-profiles/65323d748873f83a704c1d4d-avatar.png",
+					"id": "65323d748873f83a704c1d4d"
+				},
+				"categories": [
+					{
+						"code": "office",
+						"label": "Office"
+					}
+				],
+				"url": "/facility/china/beijing/beijing/mercedes-benz-lsh-building"
+			},
+			{
+				"id": "654cacbab42367b1d31f8735",
+				"pictures": [
+					"https://cdn.airvisual.net/assets/clean_air_facility/67000337-5d04-496c-acb5-9857a107987c.jpg",
+					"https://cdn.airvisual.net/assets/clean_air_facility/ffaf6cea-6d72-4521-9754-a49595426260.jpg"
+				],
+				"name": "Novo Nordisk 诺和诺德中国",
+				"city": "Tianjin",
+				"state": "Tianjin",
+				"country": "China",
+				"profile": {
+					"name": "诺和诺德(中国)制药有限公司",
+					"url": "profile/novonordisk-china",
+					"slug": "novonordisk-china",
+					"profilePicture": "https://cdn.airvisual.net/assets/public-profiles/654d94e8c6dcdde004f3e04f-avatar.png",
+					"id": "654d94e8c6dcdde004f3e04f"
+				},
+				"categories": [
+					{
+						"code": "office",
+						"label": "Office"
+					}
+				],
+				"url": "/facility/china/tianjin/tianjin/novo-nordisk"
+			},
+			{
+				"id": "65fb9917c521f5089d496c01",
+				"pictures": [
+					"https://cdn.airvisual.net/assets/clean_air_facility/8c4ff20e-0fb4-4cfb-b2f4-df09bf5df37a.jpeg",
+					"https://cdn.airvisual.net/assets/clean_air_facility/aec81d5e-8a9b-4c88-a02b-79879ee6b7dc.jpeg",
+					"https://cdn.airvisual.net/assets/clean_air_facility/7a810016-c6ec-4ac0-a112-c6689ea003db.jpg"
+				],
+				"name": "Schroder Investment Management 施罗德投资管理（上海）有限公司",
+				"city": "Shanghai",
+				"state": "Shanghai",
+				"country": "China",
+				"profile": {
+					"name": "Schroders",
+					"url": "profile/schroders",
+					"slug": "schroders",
+					"profilePicture": "https://cdn.airvisual.net/assets/public-profiles/65f3ef02438610e1431e24d3-avatar.png",
+					"id": "65f3ef02438610e1431e24d3"
+				},
+				"categories": [
+					{
+						"code": "office",
+						"label": "Office"
+					}
+				],
+				"url": "/facility/china/shanghai/shanghai/schroderinvestmentmanagement-shanghai"
+			}
+		]
+	},
+	"featuredStation": {
+		"id": "650a603ae563d7f733c3e638",
+		"name": "Kallyanpur",
+		"url": "/bangladesh/dhaka/kallyanpur",
+		"aqi": 189,
+		"flagURL": "https://cdn.airvisual.net/flags/bangladesh.jpg",
+		"gallery": {
+			"pictures": [
+				"https://cdn.airvisual.net/assets/stations/9505bd8b-f0bc-4ee5-927f-8ff1e67f59bb.b3fb80ca-e60a-4451-9e30-688cb1900577.jpg",
+				"https://cdn.airvisual.net/assets/stations/f928aa92-c190-40e8-83aa-652e30eadbae.32507cf2-282c-4f71-9aee-90d8124c23eb.jpg",
+				"https://cdn.airvisual.net/assets/stations/ec4dc07a-ac78-4604-a088-3e562af9f825.8c9a491a-d4e6-4ae7-a476-3f29bc69152d.jpg"
+			]
+		}
+	},
+	"state": "Dhaka",
+	"label": "11 Contributors",
+	"link": "https://cdn.airvisual.net/pages/contribute-data/index.min.html?utm_source=airvisual-app&utm_medium=webpage&utm_campaign=contribute-data-page&utm_term=dhaka",
+	"type": "city",
+	"current": {
+		"ts": "2025-02-17T02:00:00.000Z",
+		"aqi": 276,
+		"mainPollutant": "pm25",
+		"concentration": 201.5,
+		"estimated": false,
+		"WHOExposure": {
+			"WHOExposure": 40.3,
+			"WHOExposureColor": "red"
+		},
+		"condition": "Mist",
+		"icon": "mist",
+		"humidity": 88,
+		"pressure": 1016,
+		"wind": {
+			"speed": 0,
+			"direction": 0
+		},
+		"temperature": 20,
+		"pollutants": [
+			{
+				"unit": "µg/m³",
+				"description": "Particulate matter under 2.5 microns",
+				"aqi": 276,
+				"concentration": 201.5,
+				"pollutantName": "pm25"
+			},
+			{
+				"unit": "µg/m³",
+				"description": "Ozone",
+				"aqi": 7,
+				"concentration": 18,
+				"pollutantName": "o3"
+			}
+		],
+		"aqiDescription": "Air quality index"
+	},
+	"coordinates": {
+		"latitude": 23.7959872,
+		"longitude": 90.4232701
+	},
+	"forecasts": {
+		"hourly": [
+			{
+				"ts": "2025-02-17T02:00:00.000Z",
+				"aqi": 276,
+				"pressure": 1016,
+				"humidity": 88,
+				"wind": {
+					"speed": 0,
+					"direction": 0
+				},
+				"icon": "mist",
+				"condition": "Mist",
+				"temperature": 20
+			},
+			{
+				"ts": "2025-02-17T03:00:00.000Z",
+				"aqi": 266,
+				"pressure": 1016,
+				"humidity": 79,
+				"wind": {
+					"speed": 7.2,
+					"direction": 102
+				},
+				"icon": "scattered-clouds",
+				"condition": "Broken clouds",
+				"temperature": 21
+			},
+			{
+				"ts": "2025-02-17T04:00:00.000Z",
+				"aqi": 257,
+				"pressure": 1016,
+				"humidity": 69,
+				"wind": {
+					"speed": 7.2,
+					"direction": 121
+				},
+				"icon": "scattered-clouds",
+				"condition": "Scattered clouds",
+				"temperature": 22
+			},
+			{
+				"ts": "2025-02-17T05:00:00.000Z",
+				"aqi": 247,
+				"pressure": 1016,
+				"humidity": 57,
+				"wind": {
+					"speed": 7.2,
+					"direction": 163
+				},
+				"icon": "scattered-clouds",
+				"condition": "Scattered clouds",
+				"temperature": 25
+			},
+			{
+				"ts": "2025-02-17T06:00:00.000Z",
+				"aqi": 237,
+				"pressure": 1015,
+				"humidity": 43,
+				"wind": {
+					"speed": 7.2,
+					"direction": 196
+				},
+				"icon": "new-clouds",
+				"condition": "Few clouds",
+				"temperature": 27
+			},
+			{
+				"ts": "2025-02-17T07:00:00.000Z",
+				"aqi": 228,
+				"pressure": 1013,
+				"humidity": 27,
+				"wind": {
+					"speed": 10.8,
+					"direction": 222
+				},
+				"icon": "clear-sky",
+				"condition": "Clear sky",
+				"temperature": 30
+			},
+			{
+				"ts": "2025-02-17T08:00:00.000Z",
+				"aqi": 218,
+				"pressure": 1012,
+				"humidity": 25,
+				"wind": {
+					"speed": 10.8,
+					"direction": 232
+				},
+				"icon": "clear-sky",
+				"condition": "Clear sky",
+				"temperature": 31
+			},
+			{
+				"ts": "2025-02-17T09:00:00.000Z",
+				"aqi": 208,
+				"pressure": 1011,
+				"humidity": 25,
+				"wind": {
+					"speed": 10.8,
+					"direction": 247
+				},
+				"icon": "clear-sky",
+				"condition": "Clear sky",
+				"temperature": 31
+			},
+			{
+				"ts": "2025-02-17T10:00:00.000Z",
+				"aqi": 199,
+				"pressure": 1011,
+				"humidity": 26,
+				"wind": {
+					"speed": 10.8,
+					"direction": 262
+				},
+				"icon": "clear-sky",
+				"condition": "Clear sky",
+				"temperature": 31
+			},
+			{
+				"ts": "2025-02-17T11:00:00.000Z",
+				"aqi": 189,
+				"pressure": 1011,
+				"humidity": 28,
+				"wind": {
+					"speed": 7.2,
+					"direction": 276
+				},
+				"icon": "clear-sky",
+				"condition": "Clear sky",
+				"temperature": 30
+			},
+			{
+				"ts": "2025-02-17T12:00:00.000Z",
+				"aqi": 179,
+				"pressure": 1011,
+				"humidity": 33,
+				"wind": {
+					"speed": 7.2,
+					"direction": 332
+				},
+				"icon": "night-clear-sky",
+				"condition": "Clear sky",
+				"temperature": 27
+			},
+			{
+				"ts": "2025-02-17T13:00:00.000Z",
+				"aqi": 170,
+				"pressure": 1012,
+				"humidity": 37,
+				"wind": {
+					"speed": 0,
+					"direction": 289
+				},
+				"icon": "night-clear-sky",
+				"condition": "Clear sky",
+				"temperature": 25
+			},
+			{
+				"ts": "2025-02-17T14:00:00.000Z",
+				"aqi": 160,
+				"pressure": 1013,
+				"humidity": 38,
+				"wind": {
+					"speed": 10.8,
+					"direction": 170
+				},
+				"icon": "scattered-clouds",
+				"condition": "Broken clouds",
+				"temperature": 25
+			},
+			{
+				"ts": "2025-02-17T15:00:00.000Z",
+				"aqi": 160,
+				"pressure": 1014,
+				"humidity": 44,
+				"wind": {
+					"speed": 14.4,
+					"direction": 161
+				},
+				"icon": "scattered-clouds",
+				"condition": "Scattered clouds",
+				"temperature": 24
+			},
+			{
+				"ts": "2025-02-17T16:00:00.000Z",
+				"aqi": 160,
+				"pressure": 1014,
+				"humidity": 44,
+				"wind": {
+					"speed": 10.8,
+					"direction": 180
+				},
+				"icon": "scattered-clouds",
+				"condition": "Broken clouds",
+				"temperature": 25
+			},
+			{
+				"ts": "2025-02-17T17:00:00.000Z",
+				"aqi": 160,
+				"pressure": 1013,
+				"humidity": 47,
+				"wind": {
+					"speed": 7.2,
+					"direction": 180
+				},
+				"icon": "scattered-clouds",
+				"condition": "Scattered clouds",
+				"temperature": 24
+			},
+			{
+				"ts": "2025-02-17T18:00:00.000Z",
+				"aqi": 160,
+				"pressure": 1013,
+				"humidity": 50,
+				"wind": {
+					"speed": 7.2,
+					"direction": 191
+				},
+				"icon": "scattered-clouds",
+				"condition": "Broken clouds",
+				"temperature": 23
+			},
+			{
+				"ts": "2025-02-17T19:00:00.000Z",
+				"aqi": 160,
+				"pressure": 1013,
+				"humidity": 55,
+				"wind": {
+					"speed": 7.2,
+					"direction": 194
+				},
+				"icon": "night-clear-sky",
+				"condition": "Clear sky",
+				"temperature": 22
+			},
+			{
+				"ts": "2025-02-17T20:00:00.000Z",
+				"aqi": 160,
+				"pressure": 1012,
+				"humidity": 58,
+				"wind": {
+					"speed": 10.8,
+					"direction": 214
+				},
+				"icon": "night-clear-sky",
+				"condition": "Clear sky",
+				"temperature": 21
+			},
+			{
+				"ts": "2025-02-17T21:00:00.000Z",
+				"aqi": 160,
+				"pressure": 1012,
+				"humidity": 63,
+				"wind": {
+					"speed": 10.8,
+					"direction": 218
+				},
+				"icon": "night-clear-sky",
+				"condition": "Clear sky",
+				"temperature": 21
+			},
+			{
+				"ts": "2025-02-17T22:00:00.000Z",
+				"aqi": 160,
+				"pressure": 1012,
+				"humidity": 67,
+				"wind": {
+					"speed": 10.8,
+					"direction": 230
+				},
+				"icon": "night-clear-sky",
+				"condition": "Clear sky",
+				"temperature": 20
+			},
+			{
+				"ts": "2025-02-17T23:00:00.000Z",
+				"aqi": 160,
+				"pressure": 1012,
+				"humidity": 67,
+				"wind": {
+					"speed": 10.8,
+					"direction": 252
+				},
+				"icon": "night-clear-sky",
+				"condition": "Clear sky",
+				"temperature": 19
+			},
+			{
+				"ts": "2025-02-18T00:00:00.000Z",
+				"aqi": 127,
+				"pressure": 1012,
+				"humidity": 65,
+				"wind": {
+					"speed": 7.2,
+					"direction": 262
+				},
+				"icon": "night-clear-sky",
+				"condition": "Clear sky",
+				"temperature": 19
+			},
+			{
+				"ts": "2025-02-18T01:00:00.000Z",
+				"aqi": 127,
+				"pressure": 1013,
+				"humidity": 61,
+				"wind": {
+					"speed": 3.6,
+					"direction": 267
+				},
+				"icon": "clear-sky",
+				"condition": "Clear sky",
+				"temperature": 19
+			},
+			{
+				"ts": "2025-02-18T02:00:00.000Z",
+				"aqi": 127,
+				"pressure": 1014,
+				"humidity": 50,
+				"wind": {
+					"speed": 3.6,
+					"direction": 275
+				},
+				"icon": "clear-sky",
+				"condition": "Clear sky",
+				"temperature": 22
+			},
+			{
+				"ts": "2025-02-18T03:00:00.000Z",
+				"aqi": 127,
+				"pressure": 1015,
+				"humidity": 43,
+				"wind": {
+					"speed": 3.6,
+					"direction": 296
+				},
+				"icon": "clear-sky",
+				"condition": "Clear sky",
+				"temperature": 24
+			},
+			{
+				"ts": "2025-02-18T04:00:00.000Z",
+				"aqi": 127,
+				"pressure": 1015,
+				"humidity": 38,
+				"wind": {
+					"speed": 3.6,
+					"direction": 299
+				},
+				"icon": "clear-sky",
+				"condition": "Clear sky",
+				"temperature": 27
+			},
+			{
+				"ts": "2025-02-18T05:00:00.000Z",
+				"aqi": 127,
+				"pressure": 1014,
+				"humidity": 33,
+				"wind": {
+					"speed": 7.2,
+					"direction": 286
+				},
+				"icon": "clear-sky",
+				"condition": "Clear sky",
+				"temperature": 29
+			},
+			{
+				"ts": "2025-02-18T06:00:00.000Z",
+				"aqi": 127,
+				"pressure": 1013,
+				"humidity": 30,
+				"wind": {
+					"speed": 7.2,
+					"direction": 272
+				},
+				"icon": "clear-sky",
+				"condition": "Clear sky",
+				"temperature": 30
+			},
+			{
+				"ts": "2025-02-18T07:00:00.000Z",
+				"aqi": 127,
+				"pressure": 1011,
+				"humidity": 27,
+				"wind": {
+					"speed": 10.8,
+					"direction": 253
+				},
+				"icon": "clear-sky",
+				"condition": "Clear sky",
+				"temperature": 31
+			},
+			{
+				"ts": "2025-02-18T08:00:00.000Z",
+				"aqi": 127,
+				"pressure": 1010,
+				"humidity": 24,
+				"wind": {
+					"speed": 14.4,
+					"direction": 251
+				},
+				"icon": "clear-sky",
+				"condition": "Clear sky",
+				"temperature": 32
+			},
+			{
+				"ts": "2025-02-18T09:00:00.000Z",
+				"aqi": 127,
+				"pressure": 1009,
+				"humidity": 22,
+				"wind": {
+					"speed": 14.4,
+					"direction": 263
+				},
+				"icon": "clear-sky",
+				"condition": "Clear sky",
+				"temperature": 32
+			},
+			{
+				"ts": "2025-02-18T10:00:00.000Z",
+				"aqi": 127,
+				"pressure": 1009,
+				"humidity": 23,
+				"wind": {
+					"speed": 14.4,
+					"direction": 277
+				},
+				"icon": "clear-sky",
+				"condition": "Clear sky",
+				"temperature": 32
+			},
+			{
+				"ts": "2025-02-18T11:00:00.000Z",
+				"aqi": 127,
+				"pressure": 1009,
+				"humidity": 25,
+				"wind": {
+					"speed": 10.8,
+					"direction": 282
+				},
+				"icon": "clear-sky",
+				"condition": "Clear sky",
+				"temperature": 31
+			},
+			{
+				"ts": "2025-02-18T12:00:00.000Z",
+				"aqi": 127,
+				"pressure": 1009,
+				"humidity": 28,
+				"wind": {
+					"speed": 10.8,
+					"direction": 289
+				},
+				"icon": "night-clear-sky",
+				"condition": "Clear sky",
+				"temperature": 28
+			},
+			{
+				"ts": "2025-02-18T13:00:00.000Z",
+				"aqi": 127,
+				"pressure": 1010,
+				"humidity": 28,
+				"wind": {
+					"speed": 10.8,
+					"direction": 302
+				},
+				"icon": "night-clear-sky",
+				"condition": "Clear sky",
+				"temperature": 26
+			},
+			{
+				"ts": "2025-02-18T14:00:00.000Z",
+				"aqi": 127,
+				"pressure": 1011,
+				"humidity": 32,
+				"wind": {
+					"speed": 3.6,
+					"direction": 295
+				},
+				"icon": "night-clear-sky",
+				"condition": "Clear sky",
+				"temperature": 25
+			},
+			{
+				"ts": "2025-02-18T15:00:00.000Z",
+				"aqi": 127,
+				"pressure": 1012,
+				"humidity": 37,
+				"wind": {
+					"speed": 0,
+					"direction": 95
+				},
+				"icon": "night-clear-sky",
+				"condition": "Clear sky",
+				"temperature": 24
+			},
+			{
+				"ts": "2025-02-18T16:00:00.000Z",
+				"aqi": 127,
+				"pressure": 1012,
+				"humidity": 44,
+				"wind": {
+					"speed": 3.6,
+					"direction": 104
+				},
+				"icon": "night-clear-sky",
+				"condition": "Clear sky",
+				"temperature": 23
+			},
+			{
+				"ts": "2025-02-18T17:00:00.000Z",
+				"aqi": 127,
+				"pressure": 1012,
+				"humidity": 50,
+				"wind": {
+					"speed": 3.6,
+					"direction": 113
+				},
+				"icon": "night-clear-sky",
+				"condition": "Clear sky",
+				"temperature": 22
+			},
+			{
+				"ts": "2025-02-18T18:00:00.000Z",
+				"aqi": 127,
+				"pressure": 1012,
+				"humidity": 54,
+				"wind": {
+					"speed": 0,
+					"direction": 214
+				},
+				"icon": "night-clear-sky",
+				"condition": "Clear sky",
+				"temperature": 22
+			},
+			{
+				"ts": "2025-02-18T19:00:00.000Z",
+				"aqi": 127,
+				"pressure": 1011,
+				"humidity": 52,
+				"wind": {
+					"speed": 3.6,
+					"direction": 318
+				},
+				"icon": "night-clear-sky",
+				"condition": "Clear sky",
+				"temperature": 21
+			},
+			{
+				"ts": "2025-02-18T20:00:00.000Z",
+				"aqi": 127,
+				"pressure": 1011,
+				"humidity": 47,
+				"wind": {
+					"speed": 7.2,
+					"direction": 313
+				},
+				"icon": "night-clear-sky",
+				"condition": "Clear sky",
+				"temperature": 21
+			},
+			{
+				"ts": "2025-02-18T21:00:00.000Z",
+				"aqi": 127,
+				"pressure": 1010,
+				"humidity": 42,
+				"wind": {
+					"speed": 7.2,
+					"direction": 306
+				},
+				"icon": "night-clear-sky",
+				"condition": "Clear sky",
+				"temperature": 21
+			},
+			{
+				"ts": "2025-02-18T22:00:00.000Z",
+				"aqi": 127,
+				"pressure": 1010,
+				"humidity": 38,
+				"wind": {
+					"speed": 7.2,
+					"direction": 304
+				},
+				"icon": "night-clear-sky",
+				"condition": "Clear sky",
+				"temperature": 20
+			},
+			{
+				"ts": "2025-02-18T23:00:00.000Z",
+				"aqi": 127,
+				"pressure": 1011,
+				"humidity": 37,
+				"wind": {
+					"speed": 3.6,
+					"direction": 299
+				},
+				"icon": "night-clear-sky",
+				"condition": "Clear sky",
+				"temperature": 20
+			},
+			{
+				"ts": "2025-02-19T00:00:00.000Z",
+				"aqi": 151,
+				"pressure": 1011,
+				"humidity": 38,
+				"wind": {
+					"speed": 3.6,
+					"direction": 294
+				},
+				"icon": "night-clear-sky",
+				"condition": "Clear sky",
+				"temperature": 19
+			},
+			{
+				"ts": "2025-02-19T01:00:00.000Z",
+				"aqi": 151,
+				"pressure": 1012,
+				"humidity": 41,
+				"wind": {
+					"speed": 0,
+					"direction": 207
+				},
+				"icon": "new-clouds",
+				"condition": "Few clouds",
+				"temperature": 20
+			},
+			{
+				"ts": "2025-02-19T02:00:00.000Z",
+				"aqi": 151,
+				"pressure": 1013,
+				"humidity": 33,
+				"wind": {
+					"speed": 3.6,
+					"direction": 167
+				},
+				"icon": "scattered-clouds",
+				"condition": "Scattered clouds",
+				"temperature": 23
+			},
+			{
+				"ts": "2025-02-19T03:00:00.000Z",
+				"aqi": 151,
+				"pressure": 1013,
+				"humidity": 29,
+				"wind": {
+					"speed": 3.6,
+					"direction": 168
+				},
+				"icon": "scattered-clouds",
+				"condition": "Broken clouds",
+				"temperature": 25
+			},
+			{
+				"ts": "2025-02-19T04:00:00.000Z",
+				"aqi": 151,
+				"pressure": 1013,
+				"humidity": 24,
+				"wind": {
+					"speed": 7.2,
+					"direction": 238
+				},
+				"icon": "scattered-clouds",
+				"condition": "Scattered clouds",
+				"temperature": 28
+			},
+			{
+				"ts": "2025-02-19T05:00:00.000Z",
+				"aqi": 151,
+				"pressure": 1012,
+				"humidity": 22,
+				"wind": {
+					"speed": 3.6,
+					"direction": 251
+				},
+				"icon": "scattered-clouds",
+				"condition": "Broken clouds",
+				"temperature": 30
+			},
+			{
+				"ts": "2025-02-19T06:00:00.000Z",
+				"aqi": 151,
+				"pressure": 1012,
+				"humidity": 22,
+				"wind": {
+					"speed": 10.8,
+					"direction": 258
+				},
+				"icon": "scattered-clouds",
+				"condition": "Broken clouds",
+				"temperature": 31
+			},
+			{
+				"ts": "2025-02-19T07:00:00.000Z",
+				"aqi": 151,
+				"pressure": 1010,
+				"humidity": 23,
+				"wind": {
+					"speed": 10.8,
+					"direction": 251
+				},
+				"icon": "scattered-clouds",
+				"condition": "Broken clouds",
+				"temperature": 32
+			},
+			{
+				"ts": "2025-02-19T08:00:00.000Z",
+				"aqi": 151,
+				"pressure": 1009,
+				"humidity": 22,
+				"wind": {
+					"speed": 14.4,
+					"direction": 286
+				},
+				"icon": "scattered-clouds",
+				"condition": "Scattered clouds",
+				"temperature": 33
+			},
+			{
+				"ts": "2025-02-19T09:00:00.000Z",
+				"aqi": 151,
+				"pressure": 1008,
+				"humidity": 25,
+				"wind": {
+					"speed": 21.6,
+					"direction": 295
+				},
+				"icon": "scattered-clouds",
+				"condition": "Scattered clouds",
+				"temperature": 32
+			},
+			{
+				"ts": "2025-02-19T10:00:00.000Z",
+				"aqi": 151,
+				"pressure": 1008,
+				"humidity": 29,
+				"probabilityOfRain": 50,
+				"wind": {
+					"speed": 18,
+					"direction": 272
+				},
+				"icon": "rain",
+				"condition": "Rain",
+				"temperature": 31
+			},
+			{
+				"ts": "2025-02-19T11:00:00.000Z",
+				"aqi": 151,
+				"pressure": 1008,
+				"humidity": 41,
+				"wind": {
+					"speed": 14.4,
+					"direction": 246
+				},
+				"icon": "scattered-clouds",
+				"condition": "Broken clouds",
+				"temperature": 28
+			},
+			{
+				"ts": "2025-02-19T12:00:00.000Z",
+				"aqi": 151,
+				"pressure": 1008,
+				"humidity": 46,
+				"wind": {
+					"speed": 10.8,
+					"direction": 257
+				},
+				"icon": "scattered-clouds",
+				"condition": "Broken clouds",
+				"temperature": 26
+			},
+			{
+				"ts": "2025-02-19T13:00:00.000Z",
+				"aqi": 151,
+				"pressure": 1010,
+				"humidity": 54,
+				"wind": {
+					"speed": 18,
+					"direction": 178
+				},
+				"icon": "scattered-clouds",
+				"condition": "Broken clouds",
+				"temperature": 24
+			},
+			{
+				"ts": "2025-02-19T14:00:00.000Z",
+				"aqi": 151,
+				"pressure": 1011,
+				"humidity": 68,
+				"wind": {
+					"speed": 21.6,
+					"direction": 192
+				},
+				"icon": "scattered-clouds",
+				"condition": "Scattered clouds",
+				"temperature": 22
+			},
+			{
+				"ts": "2025-02-19T15:00:00.000Z",
+				"aqi": 151,
+				"pressure": 1011,
+				"humidity": 66,
+				"wind": {
+					"speed": 21.6,
+					"direction": 180
+				},
+				"icon": "scattered-clouds",
+				"condition": "Broken clouds",
+				"temperature": 23
+			},
+			{
+				"ts": "2025-02-19T16:00:00.000Z",
+				"aqi": 151,
+				"pressure": 1012,
+				"humidity": 67,
+				"wind": {
+					"speed": 14.4,
+					"direction": 178
+				},
+				"icon": "scattered-clouds",
+				"condition": "Broken clouds",
+				"temperature": 23
+			},
+			{
+				"ts": "2025-02-19T17:00:00.000Z",
+				"aqi": 151,
+				"pressure": 1012,
+				"humidity": 72,
+				"wind": {
+					"speed": 7.2,
+					"direction": 208
+				},
+				"icon": "scattered-clouds",
+				"condition": "Broken clouds",
+				"temperature": 22
+			},
+			{
+				"ts": "2025-02-19T18:00:00.000Z",
+				"aqi": 151,
+				"pressure": 1012,
+				"humidity": 75,
+				"wind": {
+					"speed": 7.2,
+					"direction": 252
+				},
+				"icon": "scattered-clouds",
+				"condition": "Broken clouds",
+				"temperature": 21
+			},
+			{
+				"ts": "2025-02-19T19:00:00.000Z",
+				"aqi": 151,
+				"pressure": 1011,
+				"humidity": 76,
+				"wind": {
+					"speed": 7.2,
+					"direction": 299
+				},
+				"icon": "night-clear-sky",
+				"condition": "Clear sky",
+				"temperature": 21
+			},
+			{
+				"ts": "2025-02-19T20:00:00.000Z",
+				"aqi": 151,
+				"pressure": 1011,
+				"humidity": 78,
+				"wind": {
+					"speed": 3.6,
+					"direction": 277
+				},
+				"icon": "night-clear-sky",
+				"condition": "Clear sky",
+				"temperature": 20
+			},
+			{
+				"ts": "2025-02-19T21:00:00.000Z",
+				"aqi": 151,
+				"pressure": 1011,
+				"humidity": 79,
+				"wind": {
+					"speed": 3.6,
+					"direction": 263
+				},
+				"icon": "night-clear-sky",
+				"condition": "Clear sky",
+				"temperature": 20
+			},
+			{
+				"ts": "2025-02-19T22:00:00.000Z",
+				"aqi": 151,
+				"pressure": 1011,
+				"humidity": 80,
+				"wind": {
+					"speed": 3.6,
+					"direction": 254
+				},
+				"icon": "night-few-clouds",
+				"condition": "Few clouds",
+				"temperature": 20
+			},
+			{
+				"ts": "2025-02-19T23:00:00.000Z",
+				"aqi": 151,
+				"pressure": 1011,
+				"humidity": 78,
+				"wind": {
+					"speed": 0,
+					"direction": 264
+				},
+				"icon": "scattered-clouds",
+				"condition": "Scattered clouds",
+				"temperature": 21
+			},
+			{
+				"ts": "2025-02-20T00:00:00.000Z",
+				"aqi": 123,
+				"pressure": 1012,
+				"humidity": 77,
+				"wind": {
+					"speed": 0,
+					"direction": 14
+				},
+				"icon": "scattered-clouds",
+				"condition": "Scattered clouds",
+				"temperature": 21
+			},
+			{
+				"ts": "2025-02-20T01:00:00.000Z",
+				"aqi": 123,
+				"pressure": 1013,
+				"humidity": 75,
+				"wind": {
+					"speed": 3.6,
+					"direction": 104
+				},
+				"icon": "scattered-clouds",
+				"condition": "Broken clouds",
+				"temperature": 21
+			},
+			{
+				"ts": "2025-02-20T02:00:00.000Z",
+				"aqi": 123,
+				"pressure": 1014,
+				"humidity": 68,
+				"wind": {
+					"speed": 3.6,
+					"direction": 132
+				},
+				"icon": "scattered-clouds",
+				"condition": "Broken clouds",
+				"temperature": 23
+			}
+		],
+		"daily": [
+			{
+				"ts": "2025-02-17T03:00:00.000Z",
+				"aqi": 143,
+				"pressure": 1015,
+				"humidity": 43,
+				"wind": {
+					"speed": 14.4,
+					"direction": 161
+				},
+				"icon": "new-clouds",
+				"condition": "Few clouds",
+				"temperature": {
+					"max": 31,
+					"min": 18
+				}
+			},
+			{
+				"ts": "2025-02-18T03:00:00.000Z",
+				"aqi": 140,
+				"pressure": 1013,
+				"humidity": 30,
+				"wind": {
+					"speed": 14.4,
+					"direction": 263
+				},
+				"icon": "clear-sky",
+				"condition": "Clear sky",
+				"temperature": {
+					"max": 32,
+					"min": 19
+				}
+			},
+			{
+				"ts": "2025-02-19T03:00:00.000Z",
+				"aqi": 142,
+				"pressure": 1012,
+				"humidity": 22,
+				"probabilityOfRain": 50,
+				"wind": {
+					"speed": 21.6,
+					"direction": 295
+				},
+				"icon": "rain",
+				"condition": "Rain",
+				"temperature": {
+					"max": 33,
+					"min": 19
+				}
+			},
+			{
+				"ts": "2025-02-20T03:00:00.000Z",
+				"aqi": 117,
+				"pressure": 1013,
+				"humidity": 38,
+				"probabilityOfRain": 100,
+				"wind": {
+					"speed": 14.4,
+					"direction": 172
+				},
+				"icon": "rain",
+				"condition": "Rain",
+				"temperature": {
+					"max": 32,
+					"min": 20
+				}
+			},
+			{
+				"ts": "2025-02-21T03:00:00.000Z",
+				"aqi": 98,
+				"pressure": 1013,
+				"humidity": 41,
+				"probabilityOfRain": 100,
+				"wind": {
+					"speed": 14.4,
+					"direction": 268
+				},
+				"icon": "rain",
+				"condition": "Rain",
+				"temperature": {
+					"max": 33,
+					"min": 19
+				}
+			},
+			{
+				"ts": "2025-02-22T03:00:00.000Z",
+				"aqi": 108,
+				"pressure": 1012,
+				"humidity": 33,
+				"probabilityOfRain": 30,
+				"wind": {
+					"speed": 14.4,
+					"direction": 238
+				},
+				"icon": "rain",
+				"condition": "Rain",
+				"temperature": {
+					"max": 34,
+					"min": 21
+				}
+			},
+			{
+				"ts": "2025-02-23T03:00:00.000Z",
+				"aqi": 94,
+				"pressure": 1013,
+				"humidity": 40,
+				"probabilityOfRain": 90,
+				"wind": {
+					"speed": 14.4,
+					"direction": 109
+				},
+				"icon": "rain",
+				"condition": "Rain",
+				"temperature": {
+					"max": 34,
+					"min": 20
+				}
+			}
+		]
+	},
+	"recommendations": {
+		"pollution": {
+			"exercise": {
+				"text": "Avoid outdoor exercise",
+				"value": "purple"
+			},
+			"windows": {
+				"text": "Close your windows to avoid dirty outdoor air",
+				"product": {
+					"text": "Get a monitor",
+					"name": "AirVisual Series",
+					"url": "/commercial-air-quality-monitors?utm_source=web&utm_medium=RDA&utm_campaign=health_recommendations"
+				},
+				"value": "purple"
+			},
+			"mask": {
+				"text": "Wear a mask outdoors",
+				"product": {
+					"text": "Get a mask",
+					"name": "IQAir Mask 1",
+					"url": "/commercial-face-masks?utm_source=web&utm_medium=RDA&utm_campaign=health_recommendations"
+				},
+				"value": "purple"
+			},
+			"airPurifier": {
+				"text": "Run an air purifier",
+				"product": {
+					"text": "Get an air purifier",
+					"name": "Health Pro 250",
+					"url": "/air-purifiers?utm_source=web&utm_medium=RDA&utm_campaign=health_recommendations"
+				},
+				"value": "purple"
+			}
+		}
+	},
+	"countryID": "C6qfKtSfvq5FAxdC8",
+	"stateID": "GjpviX53zAkvcfGmy",
+	"analysis": "\u003Cscript type=\"application/ld+json\"\u003E{\"@context\":\"https://schema.org\",\"@type\":\"FAQPage\",\"mainEntity\":[{\"@type\":\"Question\",\"name\":\"How bad is the air pollution in Dhaka?\",\"acceptedAnswer\":{\"@type\":\"Answer\",\"text\":\"\\r\\n\\r\\n\u003Cp\u003EDhaka, formerly known as Dacca, is the capital city of Bangladesh. It holds the title\\r\\nof not only being the largest city in the country, but being the 9\u003Csup\u003Eth\u003C/sup\u003E\\r\\nlargest city worldwide. It also ranks at 6\u003Csup\u003Eth\u003C/sup\u003E place out of the most\\r\\npopulous cities in the world, with just under 9 million people living within\\r\\nthe city’s limits. Due to these reasons, as well as being the economic hub of\\r\\nthe whole country, Dhaka is subject to some fairly bad pollution levels\\r\\nannually, with only brief periods of respite, that despite being lower still\\r\\nhold some relatively high numbers of pollution readings, making its air harmful\\r\\nto breathe year-round.\u003C/p\u003E\\r\\n\\r\\n\u003Cp\u003EIn 2019, Dhaka came in with a PM2.5 reading of 83.3 μg/m³ as the yearly average, putting\\r\\nit in the ‘unhealthy’ bracket of air quality, which requires a PM2.5 reading between\\r\\n55.5 to 150.4 μg/m³ to be classed as unhealthy. Besides just being a\\r\\nclassification, this rating is of course indicative that the air quality is\\r\\nindeed unhealthy to breathe, with numbers going well above the yearly average\\r\\nsuch as January coming in with a record high of 181.8 μg/m³, putting it into\\r\\nthe ‘very unhealthy’ bracket (150.5 to 250.4 μg/m³).\u003C/p\u003E\\r\\n\\r\\n\u003Cp\u003EThis yearly average reading of 83.3 μg/m³ was enough to put Dhaka in 1\u003Csup\u003Est\u003C/sup\u003E place\\r\\nout of all cities in Bangladesh (of note is that the only city registered for\\r\\npollution levels in the country was Dhaka, so this first-place ranking was\\r\\ninevitable) as well as being the 21\u003Csup\u003Est\u003C/sup\u003E most polluted city worldwide\\r\\nin 2019, making the level of air pollution in Dhaka quite severe, and of great\\r\\ndetriment to its citizens.\u003C/p\u003E\\r\\n\\r\\n\"}},{\"@type\":\"Question\",\"name\":\"What are the main causes of pollution in Dhaka?\",\"acceptedAnswer\":{\"@type\":\"Answer\",\"text\":\"\\r\\n\\r\\n\u003Cp\u003EDhaka faces pollution problems from all sides, as being a highly populated city, it would\\r\\nbe subject to the air contaminating effects of the massive use of cars,\\r\\nmotorbikes and trucks, many of which are not subject to strict regulations in\\r\\nregards to the age or quality of their engines, or the fuels they run on. As a\\r\\nresult, many of these vehicles travel the roads emitting far more pollution\\r\\nthat a regular car would, often running on fossil fuels such as diesel, which\\r\\nreleases higher levels of contaminants into the air than its cleaner\\r\\ncounterparts.\u003C/p\u003E\\r\\n\\r\\n\u003Cp\u003EThere is also the industrial side of the city, contributing to the ever-growing pollution\\r\\nlevels. Factory or production sites such as brick kilns are responsible for the\\r\\nmassively elevated levels of pollution. Due to an economic boom and the\\r\\nsubsequent increase in demand, Dhaka’s kilns are known to produce billions of\\r\\nbricks each year, often relying on unregulated fuel sources for power (such as\\r\\nthe burning of coal, wood and any other combustible material) which can release\\r\\nexcessive amounts of noxious fumes and smoke into the atmosphere.\u003C/p\u003E\\r\\n\\r\\n\u003Cp\u003EBesides these two issues, there are problems related to large dust concentrations building up\\r\\nin the city, somewhat similar to the highly polluted city of Delhi in India, as well as open burning\\r\\nsites where refuse containing organic matter as well as toxic materials such as\\r\\nplastics and rubber are set alight in the streets.\u003C/p\u003E\\r\\n\\r\\n\"}},{\"@type\":\"Question\",\"name\":\"What are the main pollutants found in the air in Dhaka?\",\"acceptedAnswer\":{\"@type\":\"Answer\",\"text\":\"\\r\\n\\r\\n\u003Cp\u003EWith a large amount of its pollution coming from vehicles, industries and construction sites,\\r\\nDhaka would be subject to some extremely dangerous pollutants finding\\r\\nthemselves into its atmosphere. Materials such as black carbon and volatile\\r\\norganic compounds are all released in copious amounts from the use of fossil\\r\\nfuels such as diesel in coal, present in vehicles and factories alike, as well\\r\\nas arising from the aforementioned open burn sources (with the incomplete\\r\\ncombustion of materials such as wood often leading to large amounts of black\\r\\ncarbon being produced, often in the form of soot).\u003C/p\u003E\\r\\n\\r\\n\u003Cp\u003EChemical compounds such as nitrogen dioxide (NO\u003Csub\u003E2\u003C/sub\u003E) and sulfur dioxide (SO\u003Csub\u003E2\u003C/sub\u003E)\\r\\nwould also be abundant in the atmosphere, once again finding their creation\\r\\nfrom both cars and factories alike. The brick kilns would produce vast amounts\\r\\nof their own smoke and haze, containing other compounds such as carbon monoxide\\r\\n(CO) and ozone (O\u003Csub\u003E3\u003C/sub\u003E). The large amounts of dust given off by poorly\\r\\nmaintained construction sites would contain a variety of PM2.5 and PM10, such\\r\\nas silica dust, or finely ground soil or gravel particles, all of which can\\r\\ncause a number of long-term health effects when respired.\u003C/p\u003E\\r\\n\\r\\n\"}},{\"@type\":\"Question\",\"name\":\"When is pollution in Dhaka at its worse?\",\"acceptedAnswer\":{\"@type\":\"Answer\",\"text\":\"\\r\\n\\r\\n\u003Cp\u003EAs touched on previously, pollution levels start to show considerable rises in the month of\\r\\nOctober, coinciding with the end of monsoon season and as such lacking the\\r\\nnecessary rain that is always helpful in cleaning a cities air and washing away\\r\\nits fine dust particles.\u003C/p\u003E\\r\\n\\r\\n\u003Cp\u003ESeptember saw a PM2.5 reading of 37.7 μg/m³ in 2019. This jumped up significantly in October\\r\\nto 64.6 μg/m³, and increase of nearly twofold. These numbers continued to rise\\r\\nuntil they hit their absolute peak in January, with a reading of 181.8 μg/m³ being\\r\\npresent.\u003C/p\u003E\\r\\n\\r\\n\u003Cp\u003EWith air pollution levels this bad, preventative measures become vital for Dhaka's\\r\\ncitizens, with the avoidance of outdoor activities as well as the wearing of\\r\\nfine particle filtering masks being highly necessary. After the peak in\\r\\nJanuary, pollution levels still remained extremely high but showed a steady\\r\\ndrop, with a reading of 145.7 μg/m³ in February, followed by 107.4 μg/m³ in\\r\\nMarch. These numbers continued to drop until reaching the cleanest months of\\r\\nthe year, June through to September, with August coming in with the cleanest\\r\\nreading of the year at 31.3 μg/m³.\u003C/p\u003E\\r\\n\\r\\n\"}},{\"@type\":\"Question\",\"name\":\"What can Dhaka do to reduce its pollution levels?\",\"acceptedAnswer\":{\"@type\":\"Answer\",\"text\":\"\\r\\n\\r\\n\u003Cp\u003EIn order to reduce such elevated levels of pollution, many steps would need to be taken,\\r\\nalbeit in the face of such economic growth it would a task that the city of\\r\\nDhaka would be hard pressed to do. The introduction of stricter regulations\\r\\nregarding fuels and vehicles allowed on the road would be helpful in the fight\\r\\nagainst reducing ambient pollution levels in the air, with the removal of\\r\\ndiesel fuel as well as ancient fume producing engines being of large help.\u003C/p\u003E\\r\\n\\r\\n\u003Cp\u003EOther steps would be to introduce stricter measures to both factories and construction\\r\\nsites, holding individual organizations accountable for the amount of pollution\\r\\nthat they produce, with the possibility of adding fines to those that exceed\\r\\nunsafe levels of pollution, as well as particulate matter. Whilst certainly a\\r\\ncompounded issue, the introduction of these initiatives would be a step in the\\r\\nright direction for Dhaka to obtain a cleaner level of air quality, and improve\\r\\nits US AQI readings as well as PM2.5 levels.\u003C/p\u003E\"}}]}\u003C/script\u003E\r\n\r\n\u003Ch2\u003EHow bad is the air pollution in Dhaka?\u003C/h2\u003E\r\n\r\n\u003Cp\u003EDhaka, formerly known as Dacca, is the capital city of Bangladesh. It holds the title\r\nof not only being the largest city in the country, but being the 9\u003Csup\u003Eth\u003C/sup\u003E\r\nlargest city worldwide. It also ranks at 6\u003Csup\u003Eth\u003C/sup\u003E place out of the most\r\npopulous cities in the world, with just under 9 million people living within\r\nthe city’s limits. Due to these reasons, as well as being the economic hub of\r\nthe whole country, Dhaka is subject to some fairly bad pollution levels\r\nannually, with only brief periods of respite, that despite being lower still\r\nhold some relatively high numbers of pollution readings, making its air harmful\r\nto breathe year-round.\u003C/p\u003E\r\n\r\n\u003Cp\u003EIn 2019, Dhaka came in with a PM2.5 reading of 83.3 μg/m³ as the yearly average, putting\r\nit in the ‘unhealthy’ bracket of air quality, which requires a PM2.5 reading between\r\n55.5 to 150.4 μg/m³ to be classed as unhealthy. Besides just being a\r\nclassification, this rating is of course indicative that the air quality is\r\nindeed unhealthy to breathe, with numbers going well above the yearly average\r\nsuch as January coming in with a record high of 181.8 μg/m³, putting it into\r\nthe ‘very unhealthy’ bracket (150.5 to 250.4 μg/m³).\u003C/p\u003E\r\n\r\n\u003Cp\u003EThis yearly average reading of 83.3 μg/m³ was enough to put Dhaka in 1\u003Csup\u003Est\u003C/sup\u003E place\r\nout of all cities in Bangladesh (of note is that the only city registered for\r\npollution levels in the country was Dhaka, so this first-place ranking was\r\ninevitable) as well as being the 21\u003Csup\u003Est\u003C/sup\u003E most polluted city worldwide\r\nin 2019, making the level of air pollution in Dhaka quite severe, and of great\r\ndetriment to its citizens.\u003C/p\u003E\r\n\r\n\u003Ch2\u003EWhat are the main causes of pollution in Dhaka?\u003C/h2\u003E\r\n\r\n\u003Cp\u003EDhaka faces pollution problems from all sides, as being a highly populated city, it would\r\nbe subject to the air contaminating effects of the massive use of cars,\r\nmotorbikes and trucks, many of which are not subject to strict regulations in\r\nregards to the age or quality of their engines, or the fuels they run on. As a\r\nresult, many of these vehicles travel the roads emitting far more pollution\r\nthat a regular car would, often running on fossil fuels such as diesel, which\r\nreleases higher levels of contaminants into the air than its cleaner\r\ncounterparts.\u003C/p\u003E\r\n\r\n\u003Cp\u003EThere is also the industrial side of the city, contributing to the ever-growing pollution\r\nlevels. Factory or production sites such as brick kilns are responsible for the\r\nmassively elevated levels of pollution. Due to an economic boom and the\r\nsubsequent increase in demand, Dhaka’s kilns are known to produce billions of\r\nbricks each year, often relying on unregulated fuel sources for power (such as\r\nthe burning of coal, wood and any other combustible material) which can release\r\nexcessive amounts of noxious fumes and smoke into the atmosphere.\u003C/p\u003E\r\n\r\n\u003Cp\u003EBesides these two issues, there are problems related to large dust concentrations building up\r\nin the city, somewhat similar to the highly polluted city of Delhi in India, as well as open burning\r\nsites where refuse containing organic matter as well as toxic materials such as\r\nplastics and rubber are set alight in the streets.\u003C/p\u003E\r\n\r\n\u003Ch2\u003EWhat are the main pollutants found in the air in Dhaka?\u003C/h2\u003E\r\n\r\n\u003Cp\u003EWith a large amount of its pollution coming from vehicles, industries and construction sites,\r\nDhaka would be subject to some extremely dangerous pollutants finding\r\nthemselves into its atmosphere. Materials such as black carbon and volatile\r\norganic compounds are all released in copious amounts from the use of fossil\r\nfuels such as diesel in coal, present in vehicles and factories alike, as well\r\nas arising from the aforementioned open burn sources (with the incomplete\r\ncombustion of materials such as wood often leading to large amounts of black\r\ncarbon being produced, often in the form of soot).\u003C/p\u003E\r\n\r\n\u003Cp\u003EChemical compounds such as nitrogen dioxide (NO\u003Csub\u003E2\u003C/sub\u003E) and sulfur dioxide (SO\u003Csub\u003E2\u003C/sub\u003E)\r\nwould also be abundant in the atmosphere, once again finding their creation\r\nfrom both cars and factories alike. The brick kilns would produce vast amounts\r\nof their own smoke and haze, containing other compounds such as carbon monoxide\r\n(CO) and ozone (O\u003Csub\u003E3\u003C/sub\u003E). The large amounts of dust given off by poorly\r\nmaintained construction sites would contain a variety of PM2.5 and PM10, such\r\nas silica dust, or finely ground soil or gravel particles, all of which can\r\ncause a number of long-term health effects when respired.\u003C/p\u003E\r\n\r\n\u003Ch2\u003EWhen is pollution in Dhaka at its worse?\u003C/h2\u003E\r\n\r\n\u003Cp\u003EAs touched on previously, pollution levels start to show considerable rises in the month of\r\nOctober, coinciding with the end of monsoon season and as such lacking the\r\nnecessary rain that is always helpful in cleaning a cities air and washing away\r\nits fine dust particles.\u003C/p\u003E\r\n\r\n\u003Cp\u003ESeptember saw a PM2.5 reading of 37.7 μg/m³ in 2019. This jumped up significantly in October\r\nto 64.6 μg/m³, and increase of nearly twofold. These numbers continued to rise\r\nuntil they hit their absolute peak in January, with a reading of 181.8 μg/m³ being\r\npresent.\u003C/p\u003E\r\n\r\n\u003Cp\u003EWith air pollution levels this bad, preventative measures become vital for Dhaka's\r\ncitizens, with the avoidance of outdoor activities as well as the wearing of\r\nfine particle filtering masks being highly necessary. After the peak in\r\nJanuary, pollution levels still remained extremely high but showed a steady\r\ndrop, with a reading of 145.7 μg/m³ in February, followed by 107.4 μg/m³ in\r\nMarch. These numbers continued to drop until reaching the cleanest months of\r\nthe year, June through to September, with August coming in with the cleanest\r\nreading of the year at 31.3 μg/m³.\u003C/p\u003E\r\n\r\n\u003Ch2\u003EWhat can Dhaka do to reduce its pollution levels?\u003C/h2\u003E\r\n\r\n\u003Cp\u003EIn order to reduce such elevated levels of pollution, many steps would need to be taken,\r\nalbeit in the face of such economic growth it would a task that the city of\r\nDhaka would be hard pressed to do. The introduction of stricter regulations\r\nregarding fuels and vehicles allowed on the road would be helpful in the fight\r\nagainst reducing ambient pollution levels in the air, with the removal of\r\ndiesel fuel as well as ancient fume producing engines being of large help.\u003C/p\u003E\r\n\r\n\u003Cp\u003EOther steps would be to introduce stricter measures to both factories and construction\r\nsites, holding individual organizations accountable for the amount of pollution\r\nthat they produce, with the possibility of adding fines to those that exceed\r\nunsafe levels of pollution, as well as particulate matter. Whilst certainly a\r\ncompounded issue, the introduction of these initiatives would be a step in the\r\nright direction for Dhaka to obtain a cleaner level of air quality, and improve\r\nits US AQI readings as well as PM2.5 levels.\u003C/p\u003E\r\n",
+	"promotionBanners": [
+		{
+			"description2": "While 92% of the global population is exposed to dangerous levels of air pollution, many places lack measurements to quantify its effects and allow communities to respond effectively.",
+			"headerPicture": "https://www.iqair.com/dl/hosts-and-sponsors/ic-station-add-outline-blue-500-32.png",
+			"actions": [
+				{
+					"label": "Get a monitor",
+					"url": "/air-quality-monitors"
+				},
+				{
+					"label": "How to contribute",
+					"url": "/air-quality-community"
+				}
+			]
+		}
+	],
+	"title": "Join the movement!"
+}

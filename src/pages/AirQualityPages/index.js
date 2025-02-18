@@ -20,10 +20,13 @@ import {
 	WiNightFog,
 } from "react-icons/wi";
 import { formatPollutantName } from "../../utils/formatters";
+<<<<<<< HEAD
 
 import BackButton from "../../components/BackButton";
 import HistoricalAirQuality from "../../components/HistoricalAirQuality";
 import Recommendations from "../../components/Recommendations";
+=======
+>>>>>>> refs/remotes/origin/main
 
 const cx = classNames.bind(styles);
 
@@ -33,6 +36,15 @@ const getAQIStatus = (aqi) => {
 	if (aqi <= 150) return "unhealthySensitive";
 	if (aqi <= 200) return "unhealthy";
 	if (aqi <= 300) return "veryUnhealthy";
+	return "hazardous";
+};
+
+const getAQIClassName = (aqi) => {
+	if (aqi <= 50) return "good";
+	if (aqi <= 100) return "moderate";
+	if (aqi <= 150) return "sensitive";
+	if (aqi <= 200) return "unhealthy";
+	if (aqi <= 300) return "very-unhealthy";
 	return "hazardous";
 };
 
@@ -56,15 +68,6 @@ function AirQualityPages() {
 
 		fetchCityData();
 	}, [cityId, i18n.language]);
-
-	const getAQIClassName = (aqi) => {
-		if (aqi <= 50) return "good";
-		if (aqi <= 100) return "moderate";
-		if (aqi <= 150) return "sensitive";
-		if (aqi <= 200) return "unhealthy";
-		if (aqi <= 300) return "very-unhealthy";
-		return "hazardous";
-	};
 
 	const getWeatherIcon = (condition, icon) => {
 		const isNight = icon.includes("night");
@@ -316,7 +319,6 @@ function AirQualityPages() {
 
 	return (
 		<div className={cx("container")}>
-			<BackButton />
 			<div className={cx("top-section")}>
 				{renderLocationInfo()}
 				{renderCurrentAirQuality()}
