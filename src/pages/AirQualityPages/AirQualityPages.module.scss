@@ -3,10 +3,6 @@
 	max-width: 1200px;
 	margin: 0 auto;
 	margin-top: -125px;
-
-	@media (max-width: 768px) {
-		margin-top: -32px;
-	}
 }
 
 .loading {
@@ -52,138 +48,6 @@
 	}
 }
 
-.hourly-forecast {
-	display: flex;
-	overflow-x: auto;
-	gap: 20px;
-	padding-bottom: 20px;
-	background: var(--surface-color);
-	border-radius: 12px;
-	margin: 24px 0;
-	scroll-behavior: smooth;
-	cursor: grab;
-
-	&:active {
-		cursor: grabbing;
-	}
-
-	.forecast-hour {
-		flex: 0 0 200px;
-		padding: 20px;
-		background: var(--border-color);
-		border-radius: 8px;
-		display: flex;
-		flex-direction: column;
-		gap: 16px;
-		box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-
-		.hour-time {
-			text-align: center;
-			font-size: 18px;
-			font-weight: 600;
-			color: var(--text-color);
-		}
-
-		.weather-icon {
-			text-align: center;
-			padding: 0;
-			margin-bottom: -16px;
-		}
-
-		.weather-details {
-			display: grid;
-			grid-template-columns: repeat(2, 1fr);
-			gap: 12px;
-
-			.detail-item {
-				display: flex;
-				align-items: center;
-				gap: 8px;
-				font-size: 14px;
-
-				svg {
-					font-size: 20px;
-					opacity: 0.7;
-				}
-			}
-		}
-
-		.aqi-badge {
-			display: flex;
-			justify-content: space-between;
-			align-items: center;
-			padding: 8px 12px;
-			border-radius: 6px;
-			margin-top: auto;
-
-			span {
-				font-size: 14px;
-				opacity: 0.8;
-			}
-
-			strong {
-				font-size: 18px;
-				font-weight: 600;
-			}
-
-			&.good {
-				background-color: var(--aqi-good);
-				color: #1a1a1a;
-			}
-
-			&.moderate {
-				background-color: var(--aqi-moderate);
-				color: #1a1a1a;
-			}
-
-			&.sensitive {
-				background-color: var(--aqi-sensitive);
-				color: #fff;
-			}
-
-			&.unhealthy {
-				background-color: var(--aqi-unhealthy);
-				color: #fff;
-			}
-
-			&.very-unhealthy {
-				background-color: var(--aqi-very-unhealthy);
-				color: #fff;
-			}
-
-			&.hazardous {
-				background-color: var(--aqi-hazardous);
-				color: #fff;
-			}
-		}
-	}
-
-	&::-webkit-scrollbar {
-		height: 8px;
-		display: block; // Hiển thị lại scrollbar
-	}
-
-	&::-webkit-scrollbar-track {
-		background: var(--background-color);
-	}
-
-	&::-webkit-scrollbar-thumb {
-		background: var(--border-color);
-		border-radius: 4px;
-	}
-
-	-ms-overflow-style: auto;
-	scrollbar-width: auto;
-}
-
-.forecast-hour {
-	flex: 0 0 80px;
-	text-align: center;
-	padding: 12px;
-	background: var(--surface-color);
-	border-radius: 8px;
-}
-
 .location-info {
 	text-align: left;
 	margin-bottom: 0;
@@ -219,7 +83,6 @@
 				display: flex;
 				flex-direction: column;
 				align-items: flex-end;
-				text-align: right;
 
 				.status-label {
 					font-size: 14px;
@@ -384,194 +247,6 @@
 	}
 }
 
-.current-air-quality {
-	background: var(--surface-color);
-	border-radius: 12px;
-	margin-bottom: 0;
-	height: 100%;
-
-	.main-indicators {
-		text-align: center;
-		margin-bottom: 24px;
-	}
-
-	.title-group {
-		text-align: right;
-		margin-bottom: 20px;
-
-		.section-title {
-			font-size: 25px;
-			font-weight: 600;
-			color: var(--text-color);
-			margin-bottom: 8px;
-		}
-
-		.section-subtitle {
-			font-size: 14px;
-			color: var(--text-color);
-			opacity: 0.8;
-		}
-	}
-
-	.section-title {
-		font-size: 25px;
-		font-weight: 600;
-		margin-bottom: 20px;
-		color: var(--text-color);
-		text-align: right;
-	}
-
-	.pollutants-list {
-		display: grid;
-		grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-		gap: 16px;
-		padding: 20px;
-		background: var(--background-secondary-color);
-		border-radius: 12px;
-		box-shadow: 0 0 8px rgba(0, 0, 0, 0.3);
-	}
-
-	.pollutant-item {
-		background: var(--background-color);
-		padding: 20px;
-		border-radius: 8px;
-		text-align: center;
-		transition: transform 0.2s ease;
-		border: 1px solid var(--border-color);
-
-		h4 {
-			font-size: 18px;
-			margin-bottom: 12px;
-			color: var(--text-color);
-		}
-
-		p {
-			color: var(--text-color);
-			opacity: 0.8;
-			margin: 8px 0;
-			font-size: 14px;
-
-			&:last-child {
-				margin-bottom: 0;
-			}
-		}
-	}
-}
-
-.weather-details {
-	display: grid;
-	grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
-	gap: 16px;
-	margin-top: 16px;
-}
-
-.daily-forecast {
-	margin: 24px 0;
-
-	.forecast-list {
-		display: grid;
-		grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-		gap: 16px;
-		margin-top: 16px;
-	}
-
-	.forecast-day {
-		background: var(--surface-color);
-		padding: 16px;
-		border-radius: 8px;
-		text-align: center;
-	}
-}
-
-<<<<<<< HEAD
-=======
-.recommendations-list {
-	display: grid;
-	grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-	gap: 16px;
-	margin-top: 16px;
-}
-
-.recommendation-item {
-	background: var(--surface-color);
-	padding: 16px;
-	border-radius: 8px;
-
-	&.maroon {
-		border-left: 4px solid #800000;
-	}
-}
-
-.recommendations {
-	margin: 24px 0;
-
-	.recommendations-header {
-		display: inline;
-		gap: 24px;
-		margin-bottom: 24px;
-		align-items: baseline;
-
-		.recommendations-title {
-			flex: 0 0 30%;
-			font-size: 24px;
-			font-weight: 600;
-			color: var(--text-color);
-		}
-
-		.recommendations-subtitle {
-			font-size: 16px;
-			font-weight: normal;
-			color: var(--text-color);
-			opacity: 0.8;
-		}
-	}
-
-	.recommendations-list {
-		display: grid;
-		grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-		gap: 16px;
-	}
-
-	.recommendation-item {
-		display: flex;
-		align-items: flex-start;
-		gap: 16px;
-		background-color: var(--background-secondary-color);
-		padding: 16px;
-		border-radius: 8px;
-
-		.recommendation-number {
-			flex-shrink: 0;
-			width: 32px;
-			height: 32px;
-			display: flex;
-			align-items: center;
-			justify-content: center;
-			font-size: 32px;
-			font-weight: 900;
-			color: var(--text-color);
-			background: var(--background-secondary-color);
-			border-radius: 50%;
-		}
-
-		p {
-			flex: 1;
-			margin: 0;
-			text-align: right;
-
-			@media (max-width: 768px) {
-				text-align: left;
-				
-			}
-		}
-
-		&.maroon {
-			border-left: 4px solid #800000;
-		}
-	}
-}
-
->>>>>>> refs/remotes/origin/main
 .top-section {
 	display: grid;
 	grid-template-columns: 1fr 1fr;
@@ -584,6 +259,7 @@
 		height: 100%;
 		display: flex;
 		flex-direction: column;
+		justify-content: flex-end;
 	}
 
 	.location-info,
@@ -594,21 +270,7 @@
 		flex-direction: column;
 	}
 
-	.location-info {
-		.weather-section {
-			margin-top: auto;
-			flex-shrink: 0;
-		}
-	}
-
-	.current-air-quality {
-		.pollutants-list {
-			flex: 1;
-			overflow-y: auto;
-		}
-	}
-
-	@media (max-width: 768px) {
+	@media (max-width: 1050px) {
 		grid-template-columns: 1fr;
 	}
 }

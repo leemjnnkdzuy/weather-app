@@ -1,0 +1,123 @@
+.hourly-forecast {
+	display: flex;
+	overflow-x: auto;
+	gap: 20px;
+	padding-bottom: 20px;
+	background: var(--surface-color);
+	border-radius: 12px;
+	margin: 24px 0;
+	scroll-behavior: smooth;
+	cursor: grab;
+
+	&:active {
+		cursor: grabbing;
+	}
+
+	.forecast-hour {
+		flex: 0 0 200px;
+		padding: 20px;
+		background: var(--border-color);
+		border-radius: 8px;
+		display: flex;
+		flex-direction: column;
+		gap: 16px;
+		box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+
+		.hour-time {
+			text-align: center;
+			font-size: 18px;
+			font-weight: 600;
+			color: var(--text-color);
+		}
+
+		.weather-icon {
+			text-align: center;
+			padding: 0;
+			margin-bottom: -16px;
+		}
+
+		.weather-details {
+			display: grid;
+			grid-template-columns: repeat(2, 1fr);
+			gap: 12px;
+
+			.detail-item {
+				display: flex;
+				align-items: center;
+				gap: 8px;
+				font-size: 14px;
+
+				svg {
+					font-size: 20px;
+					opacity: 0.7;
+				}
+			}
+		}
+
+		.aqi-badge {
+			display: flex;
+			justify-content: space-between;
+			align-items: center;
+			padding: 8px 12px;
+			border-radius: 6px;
+			margin-top: auto;
+
+			span {
+				font-size: 14px;
+				opacity: 0.8;
+			}
+
+			strong {
+				font-size: 18px;
+				font-weight: 600;
+			}
+
+			&.good {
+				background-color: var(--aqi-good);
+				color: #1a1a1a;
+			}
+
+			&.moderate {
+				background-color: var(--aqi-moderate);
+				color: #1a1a1a;
+			}
+
+			&.sensitive {
+				background-color: var(--aqi-sensitive);
+				color: #fff;
+			}
+
+			&.unhealthy {
+				background-color: var(--aqi-unhealthy);
+				color: #fff;
+			}
+
+			&.very-unhealthy {
+				background-color: var(--aqi-very-unhealthy);
+				color: #fff;
+			}
+
+			&.hazardous {
+				background-color: var(--aqi-hazardous);
+				color: #fff;
+			}
+		}
+	}
+
+	&::-webkit-scrollbar {
+		height: 8px;
+		display: block;
+	}
+
+	&::-webkit-scrollbar-track {
+		background: var(--background-color);
+	}
+
+	&::-webkit-scrollbar-thumb {
+		background: var(--border-color);
+		border-radius: 4px;
+	}
+
+	-ms-overflow-style: auto;
+	scrollbar-width: auto;
+}

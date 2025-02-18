@@ -1,0 +1,17 @@
+.daily-forecast {
+	margin: 24px 0;
+
+	.forecast-list {
+		display: grid;
+		grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+		gap: 16px;
+		margin-top: 16px;
+	}
+
+	.forecast-day {
+		background: var(--surface-color);
+		padding: 16px;
+		border-radius: 8px;
+		text-align: center;
+	}
+}

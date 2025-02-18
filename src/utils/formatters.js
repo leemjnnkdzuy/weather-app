@@ -1,3 +1,14 @@
+import {
+	WiDaySunny,
+	WiNightClear,
+	WiDayCloudy,
+	WiNightCloudy,
+	WiCloudy,
+	WiRain,
+	WiDayFog,
+	WiNightFog,
+} from "react-icons/wi";
+
 export const METRICS = {
 	AQI_US: "AQI⁺ Mỹ",
 	TEMPERATURE: "Nhiệt độ",
@@ -187,4 +198,31 @@ export const createChartHandlers = {
 			console.error("Error in Humidity chart handler:", error);
 		}
 	},
+};
+
+export const getWeatherIcon = (condition, icon) => {
+	const isNight = icon.includes("night");
+	const iconSize = 80;
+	switch (true) {
+		case /quang|clear/.test(condition.toLowerCase()):
+			return isNight ? (
+				<WiNightClear size={iconSize} />
+			) : (
+				<WiDaySunny size={iconSize} />
+			);
+		case /mây rải rác|scattered/.test(condition.toLowerCase()):
+			return isNight ? (
+				<WiNightCloudy size={iconSize} />
+			) : (
+				<WiDayCloudy size={iconSize} />
+			);
+		case /mây|clouds|nhiều mây/.test(condition.toLowerCase()):
+			return <WiCloudy size={iconSize} />;
+		case /mưa|rain/.test(condition.toLowerCase()):
+			return <WiRain size={iconSize} />;
+		case /sương mù|mist|fog/.test(condition.toLowerCase()):
+			return isNight ? <WiNightFog size={iconSize} /> : <WiDayFog size={iconSize} />;
+		default:
+			return <WiDaySunny size={iconSize} />;
+	}
 };
