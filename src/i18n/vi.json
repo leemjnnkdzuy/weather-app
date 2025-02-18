@@ -101,7 +101,8 @@
 		"mainPollutant": "Chất ô nhiễm chính",
 		"forecast": {
 			"sevenDay": "Dự báo 7 ngày tới",
-			"hourly": "Dự báo theo giờ"
+			"hourly": "Dự báo theo giờ",
+			"hourlyDescription": "Dự báo chi tiết trong 48 giờ tới"
 		},
 		"recommendations": {
 			"health": "Khuyến nghị sức khỏe",
@@ -140,5 +141,31 @@
 			"humid": "Ẩm ướt",
 			"veryHumid": "Rất ẩm"
 		}
+	},
+	"dateTime": {
+		"weekdays": {
+			"short": {
+				"sun": "CN",
+				"mon": "T2",
+				"tue": "T3",
+				"wed": "T4",
+				"thu": "T5",
+				"fri": "T6",
+				"sat": "T7"
+			},
+			"long": {
+				"sun": "Chủ Nhật",
+				"mon": "Thứ Hai",
+				"tue": "Thứ Ba",
+				"wed": "Thứ Tư",
+				"thu": "Thứ Năm",
+				"fri": "Thứ Sáu",
+				"sat": "Thứ Bảy"
+			}
+		},
+		"dateFormat": "dd/MM"
+	},
+	"weather": {
+		"rainChance": "Tỉ lệ mưa"
 	}
 }

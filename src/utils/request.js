@@ -145,6 +145,25 @@ export const airQualityService = {
 			);
 		}
 	},
+
+	getCityMeasurements: async (cityId, lang = "en") => {
+		try {
+			const response = await axios.get(
+				`${CLOUDFLARE_WORKER}/cities/${cityId}/measurements`,
+				{
+					params: { language: lang },
+				}
+			);
+			return response.data;
+		} catch (error) {
+			console.error("Error fetching city measurements:", error.response || error);
+			throw (
+				error.response?.data?.message ||
+				error.message ||
+				"Failed to fetch city measurements"
+			);
+		}
+	},
 };
 
 export default weatherService;

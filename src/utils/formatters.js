@@ -226,3 +226,26 @@ export const getWeatherIcon = (condition, icon) => {
 			return <WiDaySunny size={iconSize} />;
 	}
 };
+
+export const formatDay = (date, t) => {
+	const day = new Date(date).getDay();
+	const weekdays = ["sun", "mon", "tue", "wed", "thu", "fri", "sat"];
+	return t(`dateTime.weekdays.long.${weekdays[day]}`);
+};
+
+export const formatDate = (date, language) => {
+	const d = new Date(date);
+	if (language === "vi") {
+		return `${d.getDate()}/${d.getMonth() + 1}`;
+	}
+	return `${d.getMonth() + 1}/${d.getDate()}`;
+};
+
+export const formatWindDirection = (degree, language = "vi") => {
+	const directions = {
+		vi: ["Bắc", "Đông Bắc", "Đông", "Đông Nam", "Nam", "Tây Nam", "Tây", "Tây Bắc"],
+		en: ["N", "NE", "E", "SE", "S", "SW", "W", "NW"],
+	};
+	const index = Math.round(degree / 45) % 8;
+	return directions[language][index];
+};

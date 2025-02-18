@@ -1,4 +1,5 @@
 import { useEffect } from "react";
+import { useTranslation } from "react-i18next";
 import classNames from "classnames/bind";
 import styles from "./HourlyForecast.module.scss";
 import {
@@ -7,12 +8,20 @@ import {
 	WiHumidity,
 	WiStrongWind,
 	WiWindDeg,
+	WiRain,
 } from "react-icons/wi";
-import { getWeatherIcon, getAQIClassName } from "../../utils/formatters";
+import {
+	getWeatherIcon,
+	getAQIClassName,
+	formatDay,
+	formatDate,
+} from "../../utils/formatters";
 
 const cx = classNames.bind(styles);
 
 function HourlyForecast({ hourlyData }) {
+	const { t, i18n } = useTranslation();
+
 	useEffect(() => {
 		const wheelOpts = { passive: false };
 		const forecastElement = document.querySelector(`.${cx("hourly-forecast")}`);
@@ -45,41 +54,61 @@ function HourlyForecast({ hourlyData }) {
 	}, []);
 
 	return (
-		<div className={cx("hourly-forecast")}>
-			{hourlyData.map((hour, index) => (
-				<div key={index} className={cx("forecast-hour")}>
-					<div className={cx("hour-time")}>{new Date(hour.ts).getHours()}:00</div>
-					<div className={cx("weather-icon")}>
-						{getWeatherIcon(hour.condition, hour.icon)}
+		<div className={cx("hourly-container")}>
+			<div className={cx("header")}>
+				<h3>{t("airQualityRanking.forecast.hourly")}</h3>
+				<p className={cx("description")}>
+					{t("airQualityRanking.forecast.hourlyDescription")}
+				</p>
+			</div>
+			<div className={cx("hourly-forecast")}>
+				{hourlyData.map((hour, index) => (
+					<div key={index} className={cx("forecast-hour")}>
+						<div className={cx("date")}>
+							<span className={cx("day-name")}>{formatDay(hour.ts, t)}</span>
+							<span className={cx("date-num")}>{formatDate(hour.ts, i18n.language)}</span>
+						</div>
+						<div className={cx("hour-time")}>{new Date(hour.ts).getHours()}:00</div>
+						<div className={cx("weather-icon")}>
+							{getWeatherIcon(hour.condition, hour.icon)}
+						</div>
+						<div className={cx("weather-details")}>
+							<div className={cx("detail-item")}>
+								<WiThermometer />
+								<span>{hour.temperature}°C</span>
+							</div>
+							<div className={cx("detail-item")}>
+								<WiBarometer />
+								<span>{hour.pressure}</span>
+							</div>
+							<div className={cx("detail-item")}>
+								<WiHumidity />
+								<span>{hour.humidity}%</span>
+							</div>
+							<div className={cx("detail-item")}>
+								<WiStrongWind />
+								<span>{hour.wind.speed}m/s</span>
+							</div>
+							<div className={cx("detail-item")}>
+								<WiWindDeg style={{ transform: `rotate(${hour.wind.direction}deg)` }} />
+								<span>{hour.wind.direction}°</span>
+							</div>
+							{hour.probabilityOfRain && (
+								<div className={cx("rain-probability")}>
+									<WiRain />
+									<span>
+										{t("weather.rainChance")}: {hour.probabilityOfRain}%
+									</span>
+								</div>
+							)}
+						</div>
+						<div className={cx("aqi-badge", getAQIClassName(hour.aqi))}>
+							<span>AQI</span>
+							<strong>{hour.aqi}</strong>
+						</div>
 					</div>
-					<div className={cx("weather-details")}>
-						<div className={cx("detail-item")}>
-							<WiThermometer />
-							<span>{hour.temperature}°C</span>
-						</div>
-						<div className={cx("detail-item")}>
-							<WiBarometer />
-							<span>{hour.pressure}</span>
-						</div>
-						<div className={cx("detail-item")}>
-							<WiHumidity />
-							<span>{hour.humidity}%</span>
-						</div>
-						<div className={cx("detail-item")}>
-							<WiStrongWind />
-							<span>{hour.wind.speed}m/s</span>
-						</div>
-						<div className={cx("detail-item")}>
-							<WiWindDeg style={{ transform: `rotate(${hour.wind.direction}deg)` }} />
-							<span>{hour.wind.direction}°</span>
-						</div>
-					</div>
-					<div className={cx("aqi-badge", getAQIClassName(hour.aqi))}>
-						<span>AQI</span>
-						<strong>{hour.aqi}</strong>
-					</div>
-				</div>
-			))}
+				))}
+			</div>
 		</div>
 	);
 }

@@ -1,17 +1,133 @@
 .daily-forecast {
 	margin: 24px 0;
 
+	h3 {
+		font-size: 24px;
+		font-weight: 600;
+		color: var(--text-color);
+	}
+
 	.forecast-list {
 		display: grid;
-		grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-		gap: 16px;
+		grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+		gap: 12px;
 		margin-top: 16px;
 	}
 
 	.forecast-day {
-		background: var(--surface-color);
-		padding: 16px;
-		border-radius: 8px;
+		background: var(--background-secondary-color);
+		padding: 16px 12px;
+		border-radius: 12px;
 		text-align: center;
+		transition: transform 0.2s ease;
+		box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+
+		.date {
+			display: flex;
+			flex-direction: column;
+			margin-bottom: 8px;
+
+			.day-name {
+				font-size: 0.9rem;
+				color: var(--text-secondary);
+				text-transform: uppercase;
+			}
+
+			.date-num {
+				font-size: 1.2rem;
+				font-weight: bold;
+				color: var(--text-primary);
+			}
+		}
+
+		.weather-icon {
+			margin: 12px 0;
+			color: var(--primary-color);
+		}
+
+		.temperature {
+			display: flex;
+			justify-content: center;
+			gap: 8px;
+			margin-bottom: 8px;
+
+			.temp-max {
+				font-weight: bold;
+				color: var(--text-primary);
+			}
+
+			.temp-min {
+				color: var(--text-secondary);
+			}
+		}
+
+		.weather-details {
+			display: flex;
+			flex-direction: column;
+			gap: 8px;
+			margin: 12px 0;
+			font-size: 0.9rem;
+
+			.detail-item {
+				display: flex;
+				align-items: center;
+				justify-content: center;
+				gap: 4px;
+				color: var(--text-secondary);
+
+				svg {
+					font-size: 1.2rem;
+					color: var(--primary-color);
+				}
+			}
+
+			.wind-info {
+				display: flex;
+				justify-content: center;
+				gap: 12px;
+			}
+		}
+
+		.condition {
+			font-size: 0.9rem;
+			color: var(--text-secondary);
+			margin-top: 4px;
+		}
+
+		.rain-probability {
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			gap: 4px;
+			margin-top: 8px;
+			color: #2196f3;
+			font-size: 0.9rem;
+
+			svg {
+				font-size: 1.2rem;
+			}
+		}
+
+		.aqi {
+			display: inline-block;
+			padding: 4px 8px;
+			border-radius: 12px;
+			font-size: 0.9rem;
+
+			&.aqi-good {
+				background-color: rgba(76, 175, 80, 0.1);
+				color: #4caf50;
+			}
+
+			&.aqi-moderate {
+				background-color: rgba(255, 152, 0, 0.1);
+				color: #ff9800;
+			}
+
+			&.aqi-poor {
+				background-color: rgba(244, 67, 54, 0.1);
+				color: #f44336;
+			}
+		}
 	}
 }

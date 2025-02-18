@@ -101,7 +101,8 @@
 		"mainPollutant": "Main Pollutant",
 		"forecast": {
 			"sevenDay": "7-Day Forecast",
-			"hourly": "Hourly Forecast"
+			"hourly": "Hourly Forecast",
+			"hourlyDescription": "Detailed forecast for next 48 hours"
 		},
 		"recommendations": {
 			"health": "Health Recommendations",
@@ -140,5 +141,31 @@
 			"humid": "Humid",
 			"veryHumid": "Very Humid"
 		}
+	},
+	"dateTime": {
+		"weekdays": {
+			"short": {
+				"sun": "Sun",
+				"mon": "Mon",
+				"tue": "Tue",
+				"wed": "Wed",
+				"thu": "Thu",
+				"fri": "Fri",
+				"sat": "Sat"
+			},
+			"long": {
+				"sun": "Sunday",
+				"mon": "Monday",
+				"tue": "Tuesday",
+				"wed": "Wednesday",
+				"thu": "Thursday",
+				"fri": "Friday",
+				"sat": "Saturday"
+			}
+		},
+		"dateFormat": "MM/dd"
+	},
+	"weather": {
+		"rainChance": "Rain chance"
 	}
 }
