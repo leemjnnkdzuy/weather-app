@@ -5,7 +5,7 @@ import { useTheme } from "../../utils/ThemeContext";
 import classNames from "classnames/bind";
 import { HiMenuAlt2 } from "react-icons/hi";
 import { BiHome } from "react-icons/bi";
-import { WiDayThunderstorm, WiDaySunny } from "react-icons/wi";
+import { WiDaySunny } from "react-icons/wi";
 import { MdAir } from "react-icons/md";
 import { BsSun, BsMoonStars } from "react-icons/bs";
 import styles from "./Sidebar.module.scss";
@@ -31,11 +31,6 @@ function Sidebar() {
 			path: "/world-air-quality-ranking",
 			icon: <MdAir />,
 			label: t("header.airQuality"),
-		},
-		{
-			path: "/storm-and-hydrometeorological-forecasting",
-			icon: <WiDayThunderstorm />,
-			label: t("header.storm"),
 		},
 	];
 

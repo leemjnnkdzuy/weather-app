@@ -15,6 +15,8 @@ export const METRICS = {
 	HUMIDITY: "Độ ẩm",
 };
 
+export const t = (key) => key;
+
 export const formatPollutantName = (name) => {
 	const pollutantMap = {
 		pm25: "PM₂.₅",

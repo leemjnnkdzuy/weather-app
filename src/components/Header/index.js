@@ -5,7 +5,7 @@ import styles from "./Header.module.scss";
 import { useTheme } from "../../utils/ThemeContext";
 import { BsSun, BsMoonStars } from "react-icons/bs";
 import { BiHome } from "react-icons/bi";
-import { WiDayThunderstorm, WiDaySunny } from "react-icons/wi";
+import { WiDaySunny } from "react-icons/wi";
 import { MdAir } from "react-icons/md";
 import { useTranslation } from "react-i18next";
 
@@ -39,11 +39,6 @@ function Header() {
 			path: "/world-air-quality-ranking",
 			icon: <MdAir />,
 			label: t("header.airQuality"),
-		},
-		{
-			path: "/storm-and-hydrometeorological-forecasting",
-			icon: <WiDayThunderstorm />,
-			label: t("header.storm"),
 		},
 	];
 
