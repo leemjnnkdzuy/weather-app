@@ -16,32 +16,32 @@ function LocationInfo({ cityData }) {
 	const { t, i18n } = useTranslation();
 
 	const weatherItems = [
-		{
-			icon: <WiThermometer className={cx("weather-icon")} />,
-			label: t("home.weatherInfo.temperature"),
-			value: `${cityData.current.temperature}°C`,
-		},
-		{
-			icon: <WiCloudy className={cx("weather-icon")} />,
-			label: t("home.weatherDetails.atmosphere.clouds"),
-			value: cityData.current.condition,
-		},
-		{
-			icon: <WiHumidity className={cx("weather-icon")} />,
-			label: t("home.weatherInfo.humidity"),
-			value: `${cityData.current.humidity}%`,
-		},
-		{
-			icon: <WiStrongWind className={cx("weather-icon")} />,
-			label: t("home.weatherInfo.windSpeed"),
-			value: `${cityData.current.wind.speed} m/s`,
-		},
-		{
-			icon: <WiWindDeg className={cx("weather-icon")} />,
-			label: t("home.weatherDetails.wind.direction"),
-			value: `${cityData.current.wind.direction}°`,
-		},
-	];
+	{
+		icon: <WiThermometer className={cx("weather-icon")} size={45} />,
+		label: t("home.weatherInfo.temperature"),
+		value: `${cityData.current.temperature}°C`,
+	},
+	{
+		icon: <WiHumidity className={cx("weather-icon")} size={45} />,
+		label: t("home.weatherInfo.humidity"),
+		value: `${cityData.current.humidity}%`,
+	},
+	{
+		icon: <WiStrongWind className={cx("weather-icon")} size={45} />,
+		label: t("home.weatherInfo.windSpeed"),
+		value: `${cityData.current.wind.speed} m/s`,
+	},
+	{
+		icon: <WiWindDeg className={cx("weather-icon")} size={45} />,
+		label: t("home.weatherDetails.wind.direction"),
+		value: `${cityData.current.wind.direction}°`,
+	},
+	{
+		icon: <WiCloudy className={cx("weather-icon")} size={45} />,
+		label: t("home.weatherDetails.atmosphere.clouds"),
+		value: cityData.current.condition,
+	},
+];
 
 	return (
 		<div className={cx("location-info", getAQIClassName(cityData.current.aqi))}>

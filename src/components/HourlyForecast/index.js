@@ -7,8 +7,7 @@ import {
 	WiBarometer,
 	WiHumidity,
 	WiStrongWind,
-	WiWindDeg,
-	WiRain,
+	WiWindDeg
 } from "react-icons/wi";
 import {
 	getWeatherIcon,
