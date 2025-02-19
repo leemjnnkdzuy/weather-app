@@ -1,10 +1,31 @@
+import { useRef, useEffect } from "react";
 import { Line } from "react-chartjs-2";
+import {
+	Chart as ChartJS,
+	CategoryScale,
+	LinearScale,
+	PointElement,
+	LineElement,
+	Title,
+	Tooltip,
+	Legend,
+} from "chart.js";
 import { format } from "date-fns/format";
 import { vi, enUS } from "date-fns/locale";
 import { useTranslation } from "react-i18next";
 import { useTheme } from "../../utils/ThemeContext";
 import classNames from "classnames/bind";
 import styles from "./HistoricalAirQuality.module.scss";
+
+ChartJS.register(
+	CategoryScale,
+	LinearScale,
+	PointElement,
+	LineElement,
+	Title,
+	Tooltip,
+	Legend
+);
 
 const cx = classNames.bind(styles);
 
@@ -18,9 +39,19 @@ const getAqiColor = (aqi) => {
 };
 
 function HistoricalAirQuality({ hourlyData }) {
+	const chartRef = useRef(null);
 	const { t, i18n } = useTranslation();
 	const { isDarkMode } = useTheme();
 	const dateLocale = i18n.language === "vi" ? vi : enUS;
+
+	useEffect(() => {
+		const chart = chartRef.current;
+		return () => {
+			if (chart) {
+				chart.destroy();
+			}
+		};
+	}, []);
 
 	const chartData = {
 		labels: hourlyData.map((item) =>
@@ -100,7 +131,7 @@ function HistoricalAirQuality({ hourlyData }) {
 		<div className={cx("historical-chart")}>
 			<h3>{t("airQualityRanking.historical.title")}</h3>
 			<div className={cx("chart-container")}>
-				<Line data={chartData} options={options} />
+				<Line ref={chartRef} data={chartData} options={options} />
 			</div>
 		</div>
 	);

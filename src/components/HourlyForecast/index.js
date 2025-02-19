@@ -93,14 +93,6 @@ function HourlyForecast({ hourlyData }) {
 								<WiWindDeg style={{ transform: `rotate(${hour.wind.direction}deg)` }} />
 								<span>{hour.wind.direction}°</span>
 							</div>
-							{hour.probabilityOfRain && (
-								<div className={cx("rain-probability")}>
-									<WiRain />
-									<span>
-										{t("weather.rainChance")}: {hour.probabilityOfRain}%
-									</span>
-								</div>
-							)}
 						</div>
 						<div className={cx("aqi-badge", getAQIClassName(hour.aqi))}>
 							<span>AQI</span>
